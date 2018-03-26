@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GjB-sP-DPQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="Y02-P0-yM9">
+            <objects>
+                <viewController storyboardIdentifier="LFLoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GjB-sP-DPQ" customClass="LFLoginViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rx3-H0-9OR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <userGuides>
+                            <userLayoutGuide location="424" affinity="minY"/>
+                            <userLayoutGuide location="302" affinity="minY"/>
+                            <userLayoutGuide location="293" affinity="minY"/>
+                            <userLayoutGuide location="293" affinity="minY"/>
+                        </userGuides>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDr-qg-iOc">
+                                <rect key="frame" x="164.5" y="328.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="login:" destination="GjB-sP-DPQ" eventType="touchUpInside" id="spE-jq-rb0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DDr-qg-iOc" firstAttribute="centerX" secondItem="UCX-DG-xdk" secondAttribute="centerX" id="MNc-a1-Pac"/>
+                            <constraint firstItem="DDr-qg-iOc" firstAttribute="centerY" secondItem="UCX-DG-xdk" secondAttribute="centerY" id="s1z-R5-Ddd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UCX-DG-xdk"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qyk-ln-5r5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="82" y="152"/>
+        </scene>
+    </scenes>
+</document>
