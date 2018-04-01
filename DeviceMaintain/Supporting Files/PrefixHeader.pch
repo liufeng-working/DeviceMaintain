@@ -9,6 +9,11 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+#import "LFTools.h"
+#import "LFNotification.h"
+
 #import "LFCategory.h"
+#import "LFConst.h"
+#import "LFMacro.h"
 
 #endif /* PrefixHeader_pch */
