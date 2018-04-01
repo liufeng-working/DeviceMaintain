@@ -43,7 +43,6 @@
         _popGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:internalTarget action:intetnalAction];
         _popGestureRecognizer.maximumNumberOfTouches = 1;
         _popGestureRecognizer.delegate = self;
-        self.interactivePopGestureRecognizer.enabled = NO;
     }
     return _popGestureRecognizer;
 }

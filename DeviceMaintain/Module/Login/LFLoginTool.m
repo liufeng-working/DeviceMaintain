@@ -40,4 +40,14 @@
     return [LFTools objectForKey:LFIPKey];
 }
 
++ (void)saveRemebeUers:(BOOL)remebe
+{
+    [LFTools setBool:remebe forKey:LFRemebeUserKey];
+}
+
++ (BOOL)getRemebeUser
+{
+    return [LFTools boolForKey:LFRemebeUserKey];
+}
+
 @end

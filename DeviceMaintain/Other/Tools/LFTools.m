@@ -23,4 +23,17 @@
     return obj;
 }
 
++ (void)setBool:(BOOL)is forKey:(NSString *)key
+{
+    [LFUserDefaults setBool:is forKey:key];
+    [LFUserDefaults synchronize];
+}
+
++ (BOOL)boolForKey:(NSString *)key
+{
+    BOOL is = [LFUserDefaults boolForKey:key];
+    [LFUserDefaults synchronize];
+    return is;
+}
+
 @end

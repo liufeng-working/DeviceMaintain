@@ -13,4 +13,7 @@
 + (void)setObject:(id)obj forKey:(NSString *)key;
 + (id)objectForKey:(NSString *)key;
 
++ (void)setBool:(BOOL)is forKey:(NSString *)key;
++ (BOOL)boolForKey:(NSString *)key;
+
 @end

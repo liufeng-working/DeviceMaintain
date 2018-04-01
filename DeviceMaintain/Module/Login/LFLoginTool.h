@@ -12,9 +12,14 @@
 
 + (void)saveUserName:(NSString *)userName;
 + (void)savePassword:(NSString *)password;
+
 + (NSString *)getUserName;
 + (NSString *)getPassword;
+
 + (void)saveIP:(NSString *)ip;
 + (NSString *)getIP;
+
++ (void)saveRemebeUers:(BOOL)remebe;
++ (BOOL)getRemebeUser;
 
 @end

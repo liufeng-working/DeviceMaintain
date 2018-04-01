@@ -81,7 +81,7 @@
                                         <color key="tintColor" red="0.3803921569" green="0.63137254899999995" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                         <connections>
                                             <outlet property="delegate" destination="GjB-sP-DPQ" id="eCa-Hm-A1e"/>
                                         </connections>
@@ -123,21 +123,27 @@
                                         <rect key="frame" x="229" y="0.0" width="106" height="32"/>
                                         <state key="normal" title="车间配置" image="ic_setting"/>
                                         <connections>
-                                            <action selector="settingClick:" destination="GjB-sP-DPQ" eventType="touchUpInside" id="YcO-un-7bm"/>
+                                            <action selector="settingClick" destination="GjB-sP-DPQ" eventType="touchUpInside" id="BVz-3Z-pJf"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHU-mh-GJ8">
-                                <rect key="frame" x="20" y="433" width="335" height="34"/>
+                                <rect key="frame" x="20" y="433" width="335" height="44"/>
                                 <color key="backgroundColor" red="0.3803921569" green="0.63137254899999995" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Dtu-4t-Tfp"/>
+                                </constraints>
                                 <state key="normal" title="登   录"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="login" destination="GjB-sP-DPQ" eventType="touchUpInside" id="qNe-gy-X99"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -167,7 +173,6 @@
                         <outlet property="loginButton" destination="bHU-mh-GJ8" id="li7-iV-fIe"/>
                         <outlet property="passwordTextField" destination="0rS-5U-NxD" id="Im4-6Q-2ZJ"/>
                         <outlet property="remebeButton" destination="cSx-d1-tVM" id="TH1-Tp-2uu"/>
-                        <outlet property="settingButton" destination="JtJ-ud-Mr6" id="y3j-mv-4Ho"/>
                         <outlet property="userNameTextField" destination="0h7-nE-ifr" id="pCq-KY-Lvy"/>
                     </connections>
                 </viewController>
