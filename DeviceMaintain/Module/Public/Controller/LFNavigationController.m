@@ -32,7 +32,6 @@
     
     //去除底部分割线
     [[UINavigationBar appearance] setShadowImage:[UIImage new]];
-//    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHexString:@"#14A6DE"]] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
 }
 
 - (UIPanGestureRecognizer *)popGestureRecognizer
@@ -51,9 +50,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-//    self.navigationBar.translucent = NO;
-    
     [self.interactivePopGestureRecognizer.view addGestureRecognizer:self.popGestureRecognizer];
     
     self.interactivePopGestureRecognizer.enabled = NO;

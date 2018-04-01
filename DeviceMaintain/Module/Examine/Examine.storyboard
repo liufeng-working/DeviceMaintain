@@ -43,7 +43,7 @@
         <scene sceneID="2oG-yp-gHx">
             <objects>
                 <navigationController id="ga5-IN-6NG" customClass="LFNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="待反馈" id="XCh-tR-0ai"/>
+                    <tabBarItem key="tabBarItem" title="待反馈" image="ic_rb_tofeedback_nor" id="XCh-tR-0ai"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gHA-r9-4Lc">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -58,4 +58,7 @@
             <point key="canvasLocation" x="-537" y="217"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_rb_tofeedback_nor" width="30" height="30"/>
+    </resources>
 </document>

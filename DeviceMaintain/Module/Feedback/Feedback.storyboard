@@ -43,7 +43,7 @@
         <scene sceneID="YC3-jL-ySj">
             <objects>
                 <navigationController id="udN-UQ-JFM" customClass="LFNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="待审核" id="Y0N-N1-7dd"/>
+                    <tabBarItem key="tabBarItem" title="待审核" image="ic_check_pending_nor" id="Y0N-N1-7dd"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Twb-um-kn1">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -58,4 +58,7 @@
             <point key="canvasLocation" x="-553" y="245"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_check_pending_nor" width="30" height="30"/>
+    </resources>
 </document>

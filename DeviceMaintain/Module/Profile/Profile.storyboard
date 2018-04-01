@@ -43,7 +43,7 @@
         <scene sceneID="ilX-0X-Iqj">
             <objects>
                 <navigationController id="fvN-QO-JCd" customClass="LFNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="待接收" id="GJ2-tX-JWK" userLabel="我"/>
+                    <tabBarItem key="tabBarItem" title="待接收" image="ic_rb_me_nor" id="GJ2-tX-JWK" userLabel="我"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bnq-Vc-ohr">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -58,4 +58,7 @@
             <point key="canvasLocation" x="-543" y="183"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_rb_me_nor" width="30" height="30"/>
+    </resources>
 </document>
