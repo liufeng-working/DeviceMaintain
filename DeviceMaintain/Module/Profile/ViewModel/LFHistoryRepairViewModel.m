@@ -24,4 +24,19 @@
     }];
 }
 
+- (void)repairDetail:(NSString *)ID
+             success:(void(^)(LFRepairDetailModel *detail))success
+             failure:(void(^)(void))failure
+{
+    [LFNetWorking GET:LFRepairDetailUrl parameters:@{@"keyvalue": ID} success:^(id result) {
+        if (success) {
+            success([LFRepairDetailModel mj_objectWithKeyValues:result]);
+        }
+    } failure:^(NSError *error) {
+        if (failure) {
+            failure();
+        }
+    }];
+}
+
 @end

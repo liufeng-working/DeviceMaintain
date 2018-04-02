@@ -7,9 +7,9 @@
 
 #pragma mark -
 #pragma mark - 一些视图
-//登陆
+// 登陆
 #define LFLogin LFSB_InitialViewController(@"Login")
-//主视图
+// 主视图
 #define LFMain LFSB_InitialViewController(@"Main")
 
 #pragma mark -

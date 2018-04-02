@@ -28,6 +28,17 @@
 		0346FC6A20713C1800AEE6FF /* LFHistoryRepairCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0346FC6820713C1800AEE6FF /* LFHistoryRepairCell.xib */; };
 		0346FC722071408100AEE6FF /* LFLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0346FC702071408100AEE6FF /* LFLoginViewModel.m */; };
 		0346FC752071410E00AEE6FF /* LFHistoryRepairViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0346FC742071410E00AEE6FF /* LFHistoryRepairViewModel.m */; };
+		03C2EC522072629D00BA63C3 /* LFRepairViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C2EC512072629D00BA63C3 /* LFRepairViewController.m */; };
+		03C2EC5620726E3D00BA63C3 /* LFRepairDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C2EC5520726E3D00BA63C3 /* LFRepairDetailModel.m */; };
+		03C2EC5C207276E300BA63C3 /* LFPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C2EC5A207276E300BA63C3 /* LFPageViewController.m */; };
+		03C2EC5F207276FE00BA63C3 /* LFTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C2EC5D207276FE00BA63C3 /* LFTabView.m */; };
+		03C2EC622072798E00BA63C3 /* LFMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C2EC612072798E00BA63C3 /* LFMessageViewController.m */; };
+		03C2EC6520727A3400BA63C3 /* LFMessageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C2EC6420727A3400BA63C3 /* LFMessageListViewController.m */; };
+		03C2EC6B20727FE100BA63C3 /* LFMessageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C2EC6A20727FE100BA63C3 /* LFMessageViewModel.m */; };
+		03C2EC6E20727FED00BA63C3 /* LFMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C2EC6D20727FED00BA63C3 /* LFMessageModel.m */; };
+		03C2EC722072800400BA63C3 /* LFMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C2EC702072800400BA63C3 /* LFMessageCell.m */; };
+		03C2EC732072800400BA63C3 /* LFMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C2EC712072800400BA63C3 /* LFMessageCell.xib */; };
+		03C2EC762072801500BA63C3 /* LFMessageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C2EC752072801500BA63C3 /* LFMessageTool.m */; };
 		03F55BB620626973009F8D3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F55BB520626973009F8D3C /* Assets.xcassets */; };
 		03F55BB920626973009F8D3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F55BB720626973009F8D3C /* LaunchScreen.storyboard */; };
 		03F55BC5206269BE009F8D3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F55BC4206269BE009F8D3C /* AppDelegate.m */; };
@@ -97,6 +108,29 @@
 		0346FC712071408100AEE6FF /* LFLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFLoginViewModel.h; sourceTree = "<group>"; };
 		0346FC732071410E00AEE6FF /* LFHistoryRepairViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFHistoryRepairViewModel.h; sourceTree = "<group>"; };
 		0346FC742071410E00AEE6FF /* LFHistoryRepairViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFHistoryRepairViewModel.m; sourceTree = "<group>"; };
+		03C2EC502072629D00BA63C3 /* LFRepairViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFRepairViewController.h; sourceTree = "<group>"; };
+		03C2EC512072629D00BA63C3 /* LFRepairViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFRepairViewController.m; sourceTree = "<group>"; };
+		03C2EC532072669C00BA63C3 /* LFStoryboardNname.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFStoryboardNname.h; sourceTree = "<group>"; };
+		03C2EC5420726E3D00BA63C3 /* LFRepairDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFRepairDetailModel.h; sourceTree = "<group>"; };
+		03C2EC5520726E3D00BA63C3 /* LFRepairDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFRepairDetailModel.m; sourceTree = "<group>"; };
+		03C2EC5A207276E300BA63C3 /* LFPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFPageViewController.m; sourceTree = "<group>"; };
+		03C2EC5B207276E300BA63C3 /* LFPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFPageViewController.h; sourceTree = "<group>"; };
+		03C2EC5D207276FE00BA63C3 /* LFTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFTabView.m; sourceTree = "<group>"; };
+		03C2EC5E207276FE00BA63C3 /* LFTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFTabView.h; sourceTree = "<group>"; };
+		03C2EC602072798300BA63C3 /* LFMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFMessageViewController.h; sourceTree = "<group>"; };
+		03C2EC612072798E00BA63C3 /* LFMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFMessageViewController.m; sourceTree = "<group>"; };
+		03C2EC6320727A3400BA63C3 /* LFMessageListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFMessageListViewController.h; sourceTree = "<group>"; };
+		03C2EC6420727A3400BA63C3 /* LFMessageListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFMessageListViewController.m; sourceTree = "<group>"; };
+		03C2EC6820727CCF00BA63C3 /* LFColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFColor.h; sourceTree = "<group>"; };
+		03C2EC6920727FE100BA63C3 /* LFMessageViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFMessageViewModel.h; sourceTree = "<group>"; };
+		03C2EC6A20727FE100BA63C3 /* LFMessageViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFMessageViewModel.m; sourceTree = "<group>"; };
+		03C2EC6C20727FED00BA63C3 /* LFMessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFMessageModel.h; sourceTree = "<group>"; };
+		03C2EC6D20727FED00BA63C3 /* LFMessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFMessageModel.m; sourceTree = "<group>"; };
+		03C2EC6F2072800400BA63C3 /* LFMessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFMessageCell.h; sourceTree = "<group>"; };
+		03C2EC702072800400BA63C3 /* LFMessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFMessageCell.m; sourceTree = "<group>"; };
+		03C2EC712072800400BA63C3 /* LFMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LFMessageCell.xib; sourceTree = "<group>"; };
+		03C2EC742072801500BA63C3 /* LFMessageTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFMessageTool.h; sourceTree = "<group>"; };
+		03C2EC752072801500BA63C3 /* LFMessageTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFMessageTool.m; sourceTree = "<group>"; };
 		03F55BA920626972009F8D3C /* DeviceMaintain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceMaintain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03F55BB520626973009F8D3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03F55BB820626973009F8D3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -278,7 +312,9 @@
 			isa = PBXGroup;
 			children = (
 				0346FC1C2070B7A900AEE6FF /* LFConst.h */,
+				03C2EC6820727CCF00BA63C3 /* LFColor.h */,
 				0346FC1D2070B7B600AEE6FF /* LFKey.h */,
+				03C2EC532072669C00BA63C3 /* LFStoryboardNname.h */,
 			);
 			path = Const;
 			sourceTree = "<group>";
@@ -357,8 +393,8 @@
 			isa = PBXGroup;
 			children = (
 				03F55C3B20628E91009F8D3C /* Message.storyboard */,
-				03F55C0420627464009F8D3C /* ViewModel */,
 				03F55C0520627464009F8D3C /* Controller */,
+				03F55C0420627464009F8D3C /* ViewModel */,
 				03F55C0620627464009F8D3C /* Model */,
 				03F55C0720627464009F8D3C /* View */,
 				03F55C0820627464009F8D3C /* Tool */,
@@ -369,6 +405,8 @@
 		03F55C0420627464009F8D3C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				03C2EC6920727FE100BA63C3 /* LFMessageViewModel.h */,
+				03C2EC6A20727FE100BA63C3 /* LFMessageViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -376,6 +414,10 @@
 		03F55C0520627464009F8D3C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				03C2EC602072798300BA63C3 /* LFMessageViewController.h */,
+				03C2EC612072798E00BA63C3 /* LFMessageViewController.m */,
+				03C2EC6320727A3400BA63C3 /* LFMessageListViewController.h */,
+				03C2EC6420727A3400BA63C3 /* LFMessageListViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -383,6 +425,8 @@
 		03F55C0620627464009F8D3C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				03C2EC6C20727FED00BA63C3 /* LFMessageModel.h */,
+				03C2EC6D20727FED00BA63C3 /* LFMessageModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -390,6 +434,9 @@
 		03F55C0720627464009F8D3C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				03C2EC6F2072800400BA63C3 /* LFMessageCell.h */,
+				03C2EC702072800400BA63C3 /* LFMessageCell.m */,
+				03C2EC712072800400BA63C3 /* LFMessageCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -397,6 +444,8 @@
 		03F55C0820627464009F8D3C /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				03C2EC742072801500BA63C3 /* LFMessageTool.h */,
+				03C2EC752072801500BA63C3 /* LFMessageTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -527,6 +576,8 @@
 				03F55C2520627574009F8D3C /* LFTabBarController.m */,
 				03F55C2E206281DD009F8D3C /* LFViewController.h */,
 				03F55C2F206281DD009F8D3C /* LFViewController.m */,
+				03C2EC5B207276E300BA63C3 /* LFPageViewController.h */,
+				03C2EC5A207276E300BA63C3 /* LFPageViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -545,6 +596,8 @@
 				0346FC4C2070E89600AEE6FF /* LFRefreshHeader.m */,
 				0346FC4E2070E8A800AEE6FF /* LFRefreshFooter.h */,
 				0346FC4F2070E8A800AEE6FF /* LFRefreshFooter.m */,
+				03C2EC5E207276FE00BA63C3 /* LFTabView.h */,
+				03C2EC5D207276FE00BA63C3 /* LFTabView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -585,6 +638,8 @@
 				0346FC5520711CD100AEE6FF /* LFProfileViewController.m */,
 				0346FC5A2071238F00AEE6FF /* LFHistoryRepairViewController.h */,
 				0346FC5B2071238F00AEE6FF /* LFHistoryRepairViewController.m */,
+				03C2EC502072629D00BA63C3 /* LFRepairViewController.h */,
+				03C2EC512072629D00BA63C3 /* LFRepairViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -594,6 +649,8 @@
 			children = (
 				0346FC632071336A00AEE6FF /* LFHistoryRepairModel.h */,
 				0346FC642071336A00AEE6FF /* LFHistoryRepairModel.m */,
+				03C2EC5420726E3D00BA63C3 /* LFRepairDetailModel.h */,
+				03C2EC5520726E3D00BA63C3 /* LFRepairDetailModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -719,6 +776,7 @@
 				03F55C3820628E76009F8D3C /* Examine.storyboard in Resources */,
 				03F55C3E20628E9B009F8D3C /* Profile.storyboard in Resources */,
 				03F55C3C20628E91009F8D3C /* Message.storyboard in Resources */,
+				03C2EC732072800400BA63C3 /* LFMessageCell.xib in Resources */,
 				03F55C3420628E18009F8D3C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -786,10 +844,14 @@
 			files = (
 				03F55C2820627574009F8D3C /* LFNavigationController.m in Sources */,
 				0346FC652071336A00AEE6FF /* LFHistoryRepairModel.m in Sources */,
+				03C2EC622072798E00BA63C3 /* LFMessageViewController.m in Sources */,
+				03C2EC5C207276E300BA63C3 /* LFPageViewController.m in Sources */,
 				0346FC252070BAE700AEE6FF /* LFLoginTool.m in Sources */,
 				0346FC752071410E00AEE6FF /* LFHistoryRepairViewModel.m in Sources */,
+				03C2EC6520727A3400BA63C3 /* LFMessageListViewController.m in Sources */,
 				03F55C2920627574009F8D3C /* LFTabBarController.m in Sources */,
 				0346FC472070D03400AEE6FF /* NSString+LFCategory.m in Sources */,
+				03C2EC722072800400BA63C3 /* LFMessageCell.m in Sources */,
 				0346FC2F2070BF1500AEE6FF /* LFNotification.m in Sources */,
 				03F55C30206281DD009F8D3C /* LFViewController.m in Sources */,
 				0346FC532070FB7700AEE6FF /* LFReceiveViewController.m in Sources */,
@@ -800,17 +862,23 @@
 				0346FC5C2071238F00AEE6FF /* LFHistoryRepairViewController.m in Sources */,
 				03F55BC5206269BE009F8D3C /* AppDelegate.m in Sources */,
 				0346FC3E2070C32600AEE6FF /* UIViewController+LFCategory.m in Sources */,
+				03C2EC762072801500BA63C3 /* LFMessageTool.m in Sources */,
 				0346FC2E2070BF1500AEE6FF /* MBProgressHUD.m in Sources */,
 				0346FC502070E8A800AEE6FF /* LFRefreshFooter.m in Sources */,
 				0346FC5620711CD100AEE6FF /* LFProfileViewController.m in Sources */,
 				0346FC412070CD1500AEE6FF /* LFUser.m in Sources */,
 				0346FC282070BB0300AEE6FF /* LFTools.m in Sources */,
+				03C2EC6E20727FED00BA63C3 /* LFMessageModel.m in Sources */,
+				03C2EC5F207276FE00BA63C3 /* LFTabView.m in Sources */,
 				0346FC6220712C2E00AEE6FF /* LFProfileTool.m in Sources */,
 				0346FC3B2070C04C00AEE6FF /* LFNetWorking.m in Sources */,
 				0346FC722071408100AEE6FF /* LFLoginViewModel.m in Sources */,
 				0346FC442070CD5500AEE6FF /* LFUserManager.m in Sources */,
 				03F55C42206297C3009F8D3C /* UIColor+LFCategory.m in Sources */,
+				03C2EC6B20727FE100BA63C3 /* LFMessageViewModel.m in Sources */,
 				0346FC6920713C1800AEE6FF /* LFHistoryRepairCell.m in Sources */,
+				03C2EC522072629D00BA63C3 /* LFRepairViewController.m in Sources */,
+				03C2EC5620726E3D00BA63C3 /* LFRepairDetailModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,8 +24,19 @@
     self.codeNameLabel.text = [LFUserManager manager].user.UserCode;
     self.userNameLabel.text = [LFUserManager manager].user.UserName;
     
-    self.navigationController.navigationBarHidden = YES;
     self.tableView.contentInset = UIEdgeInsetsMake(-44, 0, 0, 0);
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (IBAction)exit:(UIButton *)sender {

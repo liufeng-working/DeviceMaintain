@@ -15,6 +15,12 @@
 // 历史维修
 #define LFHistoryRepairUrl LF_appendUrl(/api/RepairOrder/GetRepairOrderListAll)
 
+// 维修详情
+#define LFRepairDetailUrl LF_appendUrl(/api/RepairOrder/GetRepairOrderDetail)
+
+// 消息
+#define LFMessageUrl LF_appendUrl( /api/Msg/GetUserMsgList)
+
 #define LF_appendUrl(path) [NSString stringWithFormat:@"http://%@%@", LFLoginTool.getIP, @#path]
 
 #endif /* LFUrl_h */

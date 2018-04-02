@@ -15,4 +15,9 @@
  */
 + (NSString *)status:(NSInteger)s;
 
+/**
+ 报修单来源
+ */
++ (NSString *)RecordSource:(NSInteger)r;
+
 @end

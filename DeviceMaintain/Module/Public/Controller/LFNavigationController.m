@@ -14,7 +14,7 @@
 
 + (void)initialize {
     //背景色
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithHexString:@"#14A6DE"]];
+    [[UINavigationBar appearance] setBarTintColor:LF_color_14a6de()];
 
     //中心标题
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName: [UIFont boldSystemFontOfSize:17],
@@ -52,6 +52,8 @@
     [self.interactivePopGestureRecognizer.view addGestureRecognizer:self.popGestureRecognizer];
     
     self.interactivePopGestureRecognizer.enabled = NO;
+    
+    self.navigationBar.translucent = NO;
 }
 
 //push时，隐藏底部TabBar

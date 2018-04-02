@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "LFHistoryRepairModel.h"
+#import "LFRepairDetailModel.h"
 
 @interface LFHistoryRepairViewModel : NSObject
 
 - (void)historyRepairList:(void(^)(NSArray<LFHistoryRepairModel *> *repairs))success
                   failure:(void(^)(void))failure;
 
+- (void)repairDetail:(NSString *)ID
+             success:(void(^)(LFRepairDetailModel *detail))success
+             failure:(void(^)(void))failure;
 
 @end

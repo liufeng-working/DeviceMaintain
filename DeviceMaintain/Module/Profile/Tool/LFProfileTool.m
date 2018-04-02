@@ -24,4 +24,15 @@
     }
 }
 
+/**
+ 报修单来源
+ */
++ (NSString *)RecordSource:(NSInteger)r
+{
+    switch (r) {
+        case 1: return @"机床报警";
+        default: return @"客户报修";
+    }
+}
+
 @end

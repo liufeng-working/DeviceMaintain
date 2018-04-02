@@ -10,6 +10,7 @@
 #import "LFProfileTool.h"
 #import "LFHistoryRepairCell.h"
 #import "LFHistoryRepairViewModel.h"
+#import "LFRepairViewController.h"
 
 @interface LFHistoryRepairViewController ()
 
@@ -37,18 +38,6 @@
     [self.tableView.mj_header beginRefreshing];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.repairs.count;
 }
@@ -68,8 +57,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    
+    LFRepairViewController *detailVC = LFSB_ViewController(LFProfileSBName, LFRepairViewController);
+    detailVC.repairM = self.repairs[indexPath.row];
+    LFPush(detailVC);
 }
 
 #pragma mark -
