@@ -28,13 +28,36 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="待接收" id="drK-Yr-o3M">
-                        <barButtonItem key="rightBarButtonItem" image="ic_btn_add" id="ORU-I5-YDd"/>
+                        <barButtonItem key="rightBarButtonItem" image="ic_btn_add" id="ORU-I5-YDd">
+                            <connections>
+                                <segue destination="1kb-20-EqL" kind="show" id="VZu-56-umf"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iv2-bx-9PM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="385" y="129"/>
+        </scene>
+        <!--报修申请-->
+        <scene sceneID="MDw-TR-Emu">
+            <objects>
+                <tableViewController id="1kb-20-EqL" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nGk-BY-08F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="1kb-20-EqL" id="Esy-mX-jTC"/>
+                            <outlet property="delegate" destination="1kb-20-EqL" id="QYl-mn-Odg"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="报修申请" id="k2r-Ck-BSq"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M8C-GZ-GZV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1366" y="128"/>
         </scene>
         <!--待接收-->
         <scene sceneID="ZFn-SX-9QO">

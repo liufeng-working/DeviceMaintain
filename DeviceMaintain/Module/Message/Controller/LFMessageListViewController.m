@@ -9,6 +9,7 @@
 #import "LFMessageListViewController.h"
 #import "LFMessageViewModel.h"
 #import "LFMessageCell.h"
+#import "LFMessageDetailViewController.h"
 
 @interface LFMessageListViewController ()
 
@@ -53,6 +54,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    LFMessageDetailViewController *detailVC = LFSB_ViewController(LFMessageSBName, LFMessageDetailViewController);
+    detailVC.messageModel = self.messages[indexPath.row];
+    LFPush(detailVC);
 }
 
 #pragma mark -

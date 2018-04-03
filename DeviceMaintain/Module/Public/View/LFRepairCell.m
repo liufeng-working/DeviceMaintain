@@ -1,15 +1,15 @@
 //
-//  LFHistoryRepairCell.m
+//  LFRepairCell.m
 //  DeviceMaintain
 //
 //  Created by 刘丰 on 2018/4/2.
 //  Copyright © 2018年 liufeng. All rights reserved.
 //
 
-#import "LFHistoryRepairCell.h"
-#import "LFHistoryRepairModel.h"
+#import "LFRepairCell.h"
+#import "LFRepairModel.h"
 
-@interface LFHistoryRepairCell ()
+@interface LFRepairCell ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *numberLabel;
@@ -19,11 +19,11 @@
 
 @end
 
-@implementation LFHistoryRepairCell
+@implementation LFRepairCell
 
-LFCell_implementation(historyPerair, LFHistoryRepairCell);
+LFCell_implementation(repair, LFRepairCell);
 
-- (void)setRepairModel:(LFHistoryRepairModel *)repairModel
+- (void)setRepairModel:(LFRepairModel *)repairModel
 {
     _repairModel = repairModel;
     

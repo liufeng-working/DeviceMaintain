@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LFRepairViewController.h"
 
-@interface LFHistoryRepairViewController : UITableViewController
+@interface LFHistoryRepairViewController : LFRepairViewController
 
 @end

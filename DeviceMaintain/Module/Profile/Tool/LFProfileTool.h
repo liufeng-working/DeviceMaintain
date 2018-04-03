@@ -10,14 +10,4 @@
 
 @interface LFProfileTool : NSObject
 
-/**
- 报修单状态
- */
-+ (NSString *)status:(NSInteger)s;
-
-/**
- 报修单来源
- */
-+ (NSString *)RecordSource:(NSInteger)r;
-
 @end

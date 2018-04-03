@@ -1,5 +1,5 @@
 //
-//  LFHistoryRepairModel.h
+//  LFRepairModel.h
 //  DeviceMaintain
 //
 //  Created by 刘丰 on 2018/4/1.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LFHistoryRepairModel : NSObject
+@interface LFRepairModel : NSObject
 
 /**
  报修单id
@@ -47,7 +47,7 @@
 
 @end
 
-@interface LFHistoryRepairModel (extension)
+@interface LFRepairModel (extension)
 
 @property(nonatomic, copy, readonly) NSString *statusString;
 

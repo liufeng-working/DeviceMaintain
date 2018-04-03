@@ -6,7 +6,7 @@
 #define LFConst_h
 
 #import "LFKey.h"
-#import "LFStoryboardNname.h"
+#import "LFStoryboardName.h"
 #import "LFColor.h"
 
 #endif /* LFConst_h */

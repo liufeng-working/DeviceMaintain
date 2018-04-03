@@ -21,6 +21,10 @@
     success:(void (^)(id result))success
     failure:(void (^)(NSError *error))failure
 {
+    if (![self handleNoReachable:failure]) {
+        return;
+    }
+    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager GET:path parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [self handleResult:responseObject success:success];
@@ -40,6 +44,10 @@
                    success:(void (^)(id result))success
                    failure:(void (^)(NSError *error))failure
 {
+    if (![self handleNoReachable:failure]) {
+        return;
+    }
+    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager POST:LFLoginTool.getIP parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [self handleResult:responseObject success:success];
@@ -73,6 +81,19 @@
     }else {
         [LFNotification autoHideWithText:@"服务器异常，请稍后再试"];
     }
+}
+
++ (BOOL)handleNoReachable:(void (^)(NSError *error))failure
+{
+    if ([AFNetworkReachabilityManager sharedManager].networkReachabilityStatus == AFNetworkReachabilityStatusReachableViaWWAN || [AFNetworkReachabilityManager sharedManager].networkReachabilityStatus == AFNetworkReachabilityStatusReachableViaWiFi ) {
+        return YES;
+    }
+    
+    [LFNotification autoHideWithText:@"请检查网络设置"];
+    if (failure) {
+        failure(nil);
+    }
+    return NO;
 }
 
 @end

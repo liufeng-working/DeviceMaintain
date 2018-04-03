@@ -7,7 +7,7 @@
 //
 
 #import "LFRepairDetailModel.h"
-#import "LFProfileTool.h"
+#import "LFPublicTool.h"
 
 @implementation LFRepairDetailModel
 
@@ -19,7 +19,7 @@
 {
     NSString *_RecordSourceString = objc_getAssociatedObject(self, _cmd);
     if (!_RecordSourceString) {
-        _RecordSourceString = [LFProfileTool RecordSource:self.RecordSource];
+        _RecordSourceString = [LFPublicTool RecordSource:self.RecordSource];
         objc_setAssociatedObject(self, _cmd, _RecordSourceString, OBJC_ASSOCIATION_COPY_NONATOMIC);
     }
     return _RecordSourceString;

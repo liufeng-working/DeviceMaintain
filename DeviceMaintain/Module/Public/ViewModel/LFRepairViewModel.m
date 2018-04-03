@@ -1,21 +1,22 @@
 //
-//  LFHistoryRepairViewModel.m
+//  LFRepairViewModel.m
 //  DeviceMaintain
 //
 //  Created by 刘丰 on 2018/4/2.
 //  Copyright © 2018年 liufeng. All rights reserved.
 //
 
-#import "LFHistoryRepairViewModel.h"
+#import "LFRepairViewModel.h"
 
-@implementation LFHistoryRepairViewModel
+@implementation LFRepairViewModel
 
-- (void)historyRepairList:(void(^)(NSArray<LFHistoryRepairModel *> *repairs))success
-                  failure:(void(^)(void))failure
+- (void)repairListWithType:(LFRepairType)type
+                   success:(void(^)(NSArray<LFRepairModel *> *repairs))success
+                   failure:(void(^)(void))failure
 {
-    [LFNetWorking GET:LFHistoryRepairUrl parameters:@{@"code": @"", @"uid": [LFUserManager manager].user.UserID, @"status": @""} success:^(id result) {
+    [LFNetWorking GET:LFRepairUrl parameters:@{@"code": @"", @"uid": [LFUserManager manager].user.UserID, @"status": @(type)} success:^(id result) {
         if (success) {
-            success([LFHistoryRepairModel mj_objectArrayWithKeyValuesArray:result]);
+            success([LFRepairModel mj_objectArrayWithKeyValuesArray:result]);
         }
     } failure:^(NSError *error) {
         if (failure) {

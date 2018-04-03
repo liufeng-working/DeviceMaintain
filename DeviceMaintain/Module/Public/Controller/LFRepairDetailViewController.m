@@ -6,10 +6,10 @@
 //  Copyright © 2018年 liufeng. All rights reserved.
 //
 
-#import "LFRepairViewController.h"
-#import "LFHistoryRepairViewModel.h"
+#import "LFRepairDetailViewController.h"
+#import "LFRepairViewModel.h"
 
-@interface LFRepairViewController ()
+@interface LFRepairDetailViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *refreshButton;
 
@@ -27,11 +27,11 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *operationButton;
 
-@property(nonatomic, strong) LFHistoryRepairViewModel *repaireViewModel;
+@property(nonatomic, strong) LFRepairViewModel *repaireViewModel;
 
 @end
 
-@implementation LFRepairViewController
+@implementation LFRepairDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -78,10 +78,10 @@
 
 #pragma mark -
 #pragma mark - private私有方法
-- (LFHistoryRepairViewModel *)repaireViewModel
+- (LFRepairViewModel *)repaireViewModel
 {
     if (!_repaireViewModel) {
-        _repaireViewModel = [LFHistoryRepairViewModel new];
+        _repaireViewModel = [LFRepairViewModel new];
     }
     return _repaireViewModel;
 }

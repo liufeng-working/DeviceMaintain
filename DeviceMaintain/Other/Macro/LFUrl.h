@@ -12,8 +12,8 @@
 // 登录
 #define LFLoginUrl LF_appendUrl(/api/User)
 
-// 历史维修
-#define LFHistoryRepairUrl LF_appendUrl(/api/RepairOrder/GetRepairOrderListAll)
+// 维修
+#define LFRepairUrl LF_appendUrl(/api/RepairOrder/GetRepairOrderListAll)
 
 // 维修详情
 #define LFRepairDetailUrl LF_appendUrl(/api/RepairOrder/GetRepairOrderDetail)

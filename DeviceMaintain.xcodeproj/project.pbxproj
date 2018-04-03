@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0338DE482073C39C00D53D53 /* LFMessageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0338DE472073C39C00D53D53 /* LFMessageDetailViewController.m */; };
+		0338DE4E2073C98100D53D53 /* LFRepairViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0338DE4D2073C98100D53D53 /* LFRepairViewController.m */; };
+		0338DE5B2073CAEA00D53D53 /* LFRepairModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0338DE572073CAEA00D53D53 /* LFRepairModel.m */; };
+		0338DE5C2073CAEA00D53D53 /* LFRepairDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0338DE5A2073CAEA00D53D53 /* LFRepairDetailModel.m */; };
+		0338DE602073CAF700D53D53 /* LFRepairCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0338DE5D2073CAF600D53D53 /* LFRepairCell.m */; };
+		0338DE612073CAF700D53D53 /* LFRepairCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0338DE5E2073CAF600D53D53 /* LFRepairCell.xib */; };
+		0338DE642073CAFE00D53D53 /* LFRepairViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0338DE632073CAFE00D53D53 /* LFRepairViewModel.m */; };
+		0338DE672073CB3B00D53D53 /* LFRepairDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0338DE662073CB3B00D53D53 /* LFRepairDetailViewController.m */; };
+		0338DE6A2073CB5200D53D53 /* LFPublicTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0338DE692073CB5200D53D53 /* LFPublicTool.m */; };
+		0338DE6C2073CE1B00D53D53 /* Public.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0338DE6B2073CE1B00D53D53 /* Public.storyboard */; };
+		0338DE702073D24900D53D53 /* Feedback.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0338DE6E2073D24800D53D53 /* Feedback.storyboard */; };
+		0338DE732073D24E00D53D53 /* Examine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0338DE722073D24E00D53D53 /* Examine.storyboard */; };
+		0338DE762073D27700D53D53 /* LFFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0338DE752073D27700D53D53 /* LFFeedbackViewController.m */; };
+		0338DE7A2073D2EC00D53D53 /* LFExamineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0338DE792073D2EC00D53D53 /* LFExamineViewController.m */; };
 		0346FC252070BAE700AEE6FF /* LFLoginTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0346FC242070BAE700AEE6FF /* LFLoginTool.m */; };
 		0346FC282070BB0300AEE6FF /* LFTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0346FC272070BB0300AEE6FF /* LFTools.m */; };
 		0346FC2E2070BF1500AEE6FF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0346FC2A2070BF1400AEE6FF /* MBProgressHUD.m */; };
@@ -23,13 +37,7 @@
 		0346FC5C2071238F00AEE6FF /* LFHistoryRepairViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0346FC5B2071238F00AEE6FF /* LFHistoryRepairViewController.m */; };
 		0346FC5F20712AA200AEE6FF /* UIBarButtonItem+LFCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0346FC5D20712AA200AEE6FF /* UIBarButtonItem+LFCategory.m */; };
 		0346FC6220712C2E00AEE6FF /* LFProfileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0346FC6120712C2E00AEE6FF /* LFProfileTool.m */; };
-		0346FC652071336A00AEE6FF /* LFHistoryRepairModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0346FC642071336A00AEE6FF /* LFHistoryRepairModel.m */; };
-		0346FC6920713C1800AEE6FF /* LFHistoryRepairCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0346FC6720713C1800AEE6FF /* LFHistoryRepairCell.m */; };
-		0346FC6A20713C1800AEE6FF /* LFHistoryRepairCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0346FC6820713C1800AEE6FF /* LFHistoryRepairCell.xib */; };
 		0346FC722071408100AEE6FF /* LFLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0346FC702071408100AEE6FF /* LFLoginViewModel.m */; };
-		0346FC752071410E00AEE6FF /* LFHistoryRepairViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0346FC742071410E00AEE6FF /* LFHistoryRepairViewModel.m */; };
-		03C2EC522072629D00BA63C3 /* LFRepairViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C2EC512072629D00BA63C3 /* LFRepairViewController.m */; };
-		03C2EC5620726E3D00BA63C3 /* LFRepairDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C2EC5520726E3D00BA63C3 /* LFRepairDetailModel.m */; };
 		03C2EC5C207276E300BA63C3 /* LFPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C2EC5A207276E300BA63C3 /* LFPageViewController.m */; };
 		03C2EC5F207276FE00BA63C3 /* LFTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C2EC5D207276FE00BA63C3 /* LFTabView.m */; };
 		03C2EC622072798E00BA63C3 /* LFMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C2EC612072798E00BA63C3 /* LFMessageViewController.m */; };
@@ -50,8 +58,6 @@
 		03F55C3220628D13009F8D3C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F55C3120628D13009F8D3C /* Login.storyboard */; };
 		03F55C3420628E18009F8D3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F55C3320628E18009F8D3C /* Main.storyboard */; };
 		03F55C3620628E67009F8D3C /* Receive.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F55C3520628E67009F8D3C /* Receive.storyboard */; };
-		03F55C3820628E76009F8D3C /* Examine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F55C3720628E76009F8D3C /* Examine.storyboard */; };
-		03F55C3A20628E84009F8D3C /* Feedback.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F55C3920628E84009F8D3C /* Feedback.storyboard */; };
 		03F55C3C20628E91009F8D3C /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F55C3B20628E91009F8D3C /* Message.storyboard */; };
 		03F55C3E20628E9B009F8D3C /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F55C3D20628E9B009F8D3C /* Profile.storyboard */; };
 		03F55C42206297C3009F8D3C /* UIColor+LFCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F55C41206297C2009F8D3C /* UIColor+LFCategory.m */; };
@@ -59,6 +65,30 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0338DE462073C39C00D53D53 /* LFMessageDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFMessageDetailViewController.h; sourceTree = "<group>"; };
+		0338DE472073C39C00D53D53 /* LFMessageDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFMessageDetailViewController.m; sourceTree = "<group>"; };
+		0338DE4C2073C98100D53D53 /* LFRepairViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFRepairViewController.h; sourceTree = "<group>"; };
+		0338DE4D2073C98100D53D53 /* LFRepairViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFRepairViewController.m; sourceTree = "<group>"; };
+		0338DE572073CAEA00D53D53 /* LFRepairModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFRepairModel.m; sourceTree = "<group>"; };
+		0338DE582073CAEA00D53D53 /* LFRepairDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFRepairDetailModel.h; sourceTree = "<group>"; };
+		0338DE592073CAEA00D53D53 /* LFRepairModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFRepairModel.h; sourceTree = "<group>"; };
+		0338DE5A2073CAEA00D53D53 /* LFRepairDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFRepairDetailModel.m; sourceTree = "<group>"; };
+		0338DE5D2073CAF600D53D53 /* LFRepairCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFRepairCell.m; sourceTree = "<group>"; };
+		0338DE5E2073CAF600D53D53 /* LFRepairCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFRepairCell.xib; sourceTree = "<group>"; };
+		0338DE5F2073CAF600D53D53 /* LFRepairCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFRepairCell.h; sourceTree = "<group>"; };
+		0338DE622073CAFE00D53D53 /* LFRepairViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFRepairViewModel.h; sourceTree = "<group>"; };
+		0338DE632073CAFE00D53D53 /* LFRepairViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFRepairViewModel.m; sourceTree = "<group>"; };
+		0338DE652073CB3B00D53D53 /* LFRepairDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFRepairDetailViewController.h; sourceTree = "<group>"; };
+		0338DE662073CB3B00D53D53 /* LFRepairDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFRepairDetailViewController.m; sourceTree = "<group>"; };
+		0338DE682073CB5200D53D53 /* LFPublicTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFPublicTool.h; sourceTree = "<group>"; };
+		0338DE692073CB5200D53D53 /* LFPublicTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFPublicTool.m; sourceTree = "<group>"; };
+		0338DE6B2073CE1B00D53D53 /* Public.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Public.storyboard; sourceTree = "<group>"; };
+		0338DE6E2073D24800D53D53 /* Feedback.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feedback.storyboard; sourceTree = "<group>"; };
+		0338DE722073D24E00D53D53 /* Examine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Examine.storyboard; sourceTree = "<group>"; };
+		0338DE742073D27700D53D53 /* LFFeedbackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFFeedbackViewController.h; sourceTree = "<group>"; };
+		0338DE752073D27700D53D53 /* LFFeedbackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFFeedbackViewController.m; sourceTree = "<group>"; };
+		0338DE782073D2EC00D53D53 /* LFExamineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFExamineViewController.h; sourceTree = "<group>"; };
+		0338DE792073D2EC00D53D53 /* LFExamineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFExamineViewController.m; sourceTree = "<group>"; };
 		0346FC1C2070B7A900AEE6FF /* LFConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFConst.h; sourceTree = "<group>"; };
 		0346FC1D2070B7B600AEE6FF /* LFKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFKey.h; sourceTree = "<group>"; };
 		0346FC202070B9FE00AEE6FF /* LFMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFMacro.h; sourceTree = "<group>"; };
@@ -98,21 +128,10 @@
 		0346FC5E20712AA200AEE6FF /* UIBarButtonItem+LFCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+LFCategory.h"; sourceTree = "<group>"; };
 		0346FC6020712C2E00AEE6FF /* LFProfileTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFProfileTool.h; sourceTree = "<group>"; };
 		0346FC6120712C2E00AEE6FF /* LFProfileTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFProfileTool.m; sourceTree = "<group>"; };
-		0346FC632071336A00AEE6FF /* LFHistoryRepairModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFHistoryRepairModel.h; sourceTree = "<group>"; };
-		0346FC642071336A00AEE6FF /* LFHistoryRepairModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFHistoryRepairModel.m; sourceTree = "<group>"; };
-		0346FC6620713C1800AEE6FF /* LFHistoryRepairCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFHistoryRepairCell.h; sourceTree = "<group>"; };
-		0346FC6720713C1800AEE6FF /* LFHistoryRepairCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFHistoryRepairCell.m; sourceTree = "<group>"; };
-		0346FC6820713C1800AEE6FF /* LFHistoryRepairCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LFHistoryRepairCell.xib; sourceTree = "<group>"; };
 		0346FC6C20713CE600AEE6FF /* LFFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFunction.h; sourceTree = "<group>"; };
 		0346FC702071408100AEE6FF /* LFLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFLoginViewModel.m; sourceTree = "<group>"; };
 		0346FC712071408100AEE6FF /* LFLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFLoginViewModel.h; sourceTree = "<group>"; };
-		0346FC732071410E00AEE6FF /* LFHistoryRepairViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFHistoryRepairViewModel.h; sourceTree = "<group>"; };
-		0346FC742071410E00AEE6FF /* LFHistoryRepairViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFHistoryRepairViewModel.m; sourceTree = "<group>"; };
-		03C2EC502072629D00BA63C3 /* LFRepairViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFRepairViewController.h; sourceTree = "<group>"; };
-		03C2EC512072629D00BA63C3 /* LFRepairViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFRepairViewController.m; sourceTree = "<group>"; };
-		03C2EC532072669C00BA63C3 /* LFStoryboardNname.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFStoryboardNname.h; sourceTree = "<group>"; };
-		03C2EC5420726E3D00BA63C3 /* LFRepairDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFRepairDetailModel.h; sourceTree = "<group>"; };
-		03C2EC5520726E3D00BA63C3 /* LFRepairDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFRepairDetailModel.m; sourceTree = "<group>"; };
+		03C2EC532072669C00BA63C3 /* LFStoryboardName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFStoryboardName.h; sourceTree = "<group>"; };
 		03C2EC5A207276E300BA63C3 /* LFPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFPageViewController.m; sourceTree = "<group>"; };
 		03C2EC5B207276E300BA63C3 /* LFPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFPageViewController.h; sourceTree = "<group>"; };
 		03C2EC5D207276FE00BA63C3 /* LFTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFTabView.m; sourceTree = "<group>"; };
@@ -149,8 +168,6 @@
 		03F55C3120628D13009F8D3C /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		03F55C3320628E18009F8D3C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		03F55C3520628E67009F8D3C /* Receive.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Receive.storyboard; sourceTree = "<group>"; };
-		03F55C3720628E76009F8D3C /* Examine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Examine.storyboard; sourceTree = "<group>"; };
-		03F55C3920628E84009F8D3C /* Feedback.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feedback.storyboard; sourceTree = "<group>"; };
 		03F55C3B20628E91009F8D3C /* Message.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
 		03F55C3D20628E9B009F8D3C /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		03F55C3F20628FAC009F8D3C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -174,6 +191,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0338DE6D2073D24800D53D53 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				0338DE6E2073D24800D53D53 /* Feedback.storyboard */,
+				0338DE6F2073D24800D53D53 /* Controller */,
+			);
+			path = Feedback;
+			sourceTree = "<group>";
+		};
+		0338DE6F2073D24800D53D53 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0338DE742073D27700D53D53 /* LFFeedbackViewController.h */,
+				0338DE752073D27700D53D53 /* LFFeedbackViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0338DE712073D24E00D53D53 /* Examine */ = {
+			isa = PBXGroup;
+			children = (
+				0338DE722073D24E00D53D53 /* Examine.storyboard */,
+				0338DE772073D2E100D53D53 /* Controller */,
+			);
+			path = Examine;
+			sourceTree = "<group>";
+		};
+		0338DE772073D2E100D53D53 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0338DE782073D2EC00D53D53 /* LFExamineViewController.h */,
+				0338DE792073D2EC00D53D53 /* LFExamineViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		0346FC1F2070B9EC00AEE6FF /* Macro */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,7 +367,7 @@
 				0346FC1C2070B7A900AEE6FF /* LFConst.h */,
 				03C2EC6820727CCF00BA63C3 /* LFColor.h */,
 				0346FC1D2070B7B600AEE6FF /* LFKey.h */,
-				03C2EC532072669C00BA63C3 /* LFStoryboardNname.h */,
+				03C2EC532072669C00BA63C3 /* LFStoryboardName.h */,
 			);
 			path = Const;
 			sourceTree = "<group>";
@@ -332,61 +385,13 @@
 				03F55C3320628E18009F8D3C /* Main.storyboard */,
 				03F55C2220627464009F8D3C /* Login */,
 				03F55C1020627464009F8D3C /* Receive */,
-				03F55BFD20627464009F8D3C /* Examine */,
-				03F55C0A20627464009F8D3C /* Feedback */,
+				0338DE6D2073D24800D53D53 /* Feedback */,
+				0338DE712073D24E00D53D53 /* Examine */,
 				03F55C0320627464009F8D3C /* Message */,
 				03F55C1C20627464009F8D3C /* Profile */,
 				03F55C1620627464009F8D3C /* Public */,
 			);
 			path = Module;
-			sourceTree = "<group>";
-		};
-		03F55BFD20627464009F8D3C /* Examine */ = {
-			isa = PBXGroup;
-			children = (
-				03F55C3720628E76009F8D3C /* Examine.storyboard */,
-				03F55BFE20627464009F8D3C /* ViewModel */,
-				03F55BFF20627464009F8D3C /* Controller */,
-				03F55C0020627464009F8D3C /* Model */,
-				03F55C0120627464009F8D3C /* View */,
-				03F55C0220627464009F8D3C /* Tool */,
-			);
-			path = Examine;
-			sourceTree = "<group>";
-		};
-		03F55BFE20627464009F8D3C /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		03F55BFF20627464009F8D3C /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		03F55C0020627464009F8D3C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		03F55C0120627464009F8D3C /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		03F55C0220627464009F8D3C /* Tool */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tool;
 			sourceTree = "<group>";
 		};
 		03F55C0320627464009F8D3C /* Message */ = {
@@ -418,6 +423,8 @@
 				03C2EC612072798E00BA63C3 /* LFMessageViewController.m */,
 				03C2EC6320727A3400BA63C3 /* LFMessageListViewController.h */,
 				03C2EC6420727A3400BA63C3 /* LFMessageListViewController.m */,
+				0338DE462073C39C00D53D53 /* LFMessageDetailViewController.h */,
+				0338DE472073C39C00D53D53 /* LFMessageDetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -446,54 +453,6 @@
 			children = (
 				03C2EC742072801500BA63C3 /* LFMessageTool.h */,
 				03C2EC752072801500BA63C3 /* LFMessageTool.m */,
-			);
-			path = Tool;
-			sourceTree = "<group>";
-		};
-		03F55C0A20627464009F8D3C /* Feedback */ = {
-			isa = PBXGroup;
-			children = (
-				03F55C3920628E84009F8D3C /* Feedback.storyboard */,
-				03F55C0B20627464009F8D3C /* ViewModel */,
-				03F55C0C20627464009F8D3C /* Controller */,
-				03F55C0D20627464009F8D3C /* Model */,
-				03F55C0E20627464009F8D3C /* View */,
-				03F55C0F20627464009F8D3C /* Tool */,
-			);
-			path = Feedback;
-			sourceTree = "<group>";
-		};
-		03F55C0B20627464009F8D3C /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		03F55C0C20627464009F8D3C /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		03F55C0D20627464009F8D3C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		03F55C0E20627464009F8D3C /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		03F55C0F20627464009F8D3C /* Tool */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -563,6 +522,8 @@
 		03F55C1720627464009F8D3C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0338DE622073CAFE00D53D53 /* LFRepairViewModel.h */,
+				0338DE632073CAFE00D53D53 /* LFRepairViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -570,6 +531,7 @@
 		03F55C1820627464009F8D3C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0338DE6B2073CE1B00D53D53 /* Public.storyboard */,
 				03F55C2720627574009F8D3C /* LFNavigationController.h */,
 				03F55C2420627574009F8D3C /* LFNavigationController.m */,
 				03F55C2620627574009F8D3C /* LFTabBarController.h */,
@@ -578,6 +540,10 @@
 				03F55C2F206281DD009F8D3C /* LFViewController.m */,
 				03C2EC5B207276E300BA63C3 /* LFPageViewController.h */,
 				03C2EC5A207276E300BA63C3 /* LFPageViewController.m */,
+				0338DE4C2073C98100D53D53 /* LFRepairViewController.h */,
+				0338DE4D2073C98100D53D53 /* LFRepairViewController.m */,
+				0338DE652073CB3B00D53D53 /* LFRepairDetailViewController.h */,
+				0338DE662073CB3B00D53D53 /* LFRepairDetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -585,6 +551,10 @@
 		03F55C1920627464009F8D3C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0338DE592073CAEA00D53D53 /* LFRepairModel.h */,
+				0338DE572073CAEA00D53D53 /* LFRepairModel.m */,
+				0338DE582073CAEA00D53D53 /* LFRepairDetailModel.h */,
+				0338DE5A2073CAEA00D53D53 /* LFRepairDetailModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -598,6 +568,9 @@
 				0346FC4F2070E8A800AEE6FF /* LFRefreshFooter.m */,
 				03C2EC5E207276FE00BA63C3 /* LFTabView.h */,
 				03C2EC5D207276FE00BA63C3 /* LFTabView.m */,
+				0338DE5F2073CAF600D53D53 /* LFRepairCell.h */,
+				0338DE5D2073CAF600D53D53 /* LFRepairCell.m */,
+				0338DE5E2073CAF600D53D53 /* LFRepairCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -605,6 +578,8 @@
 		03F55C1B20627464009F8D3C /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				0338DE682073CB5200D53D53 /* LFPublicTool.h */,
+				0338DE692073CB5200D53D53 /* LFPublicTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -625,8 +600,6 @@
 		03F55C1D20627464009F8D3C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				0346FC732071410E00AEE6FF /* LFHistoryRepairViewModel.h */,
-				0346FC742071410E00AEE6FF /* LFHistoryRepairViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -638,8 +611,6 @@
 				0346FC5520711CD100AEE6FF /* LFProfileViewController.m */,
 				0346FC5A2071238F00AEE6FF /* LFHistoryRepairViewController.h */,
 				0346FC5B2071238F00AEE6FF /* LFHistoryRepairViewController.m */,
-				03C2EC502072629D00BA63C3 /* LFRepairViewController.h */,
-				03C2EC512072629D00BA63C3 /* LFRepairViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -647,10 +618,6 @@
 		03F55C1F20627464009F8D3C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0346FC632071336A00AEE6FF /* LFHistoryRepairModel.h */,
-				0346FC642071336A00AEE6FF /* LFHistoryRepairModel.m */,
-				03C2EC5420726E3D00BA63C3 /* LFRepairDetailModel.h */,
-				03C2EC5520726E3D00BA63C3 /* LFRepairDetailModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -658,9 +625,6 @@
 		03F55C2020627464009F8D3C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0346FC6620713C1800AEE6FF /* LFHistoryRepairCell.h */,
-				0346FC6720713C1800AEE6FF /* LFHistoryRepairCell.m */,
-				0346FC6820713C1800AEE6FF /* LFHistoryRepairCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -768,16 +732,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				03F55C3620628E67009F8D3C /* Receive.storyboard in Resources */,
-				0346FC6A20713C1800AEE6FF /* LFHistoryRepairCell.xib in Resources */,
-				03F55C3A20628E84009F8D3C /* Feedback.storyboard in Resources */,
 				03F55C3220628D13009F8D3C /* Login.storyboard in Resources */,
 				03F55BB920626973009F8D3C /* LaunchScreen.storyboard in Resources */,
+				0338DE612073CAF700D53D53 /* LFRepairCell.xib in Resources */,
+				0338DE732073D24E00D53D53 /* Examine.storyboard in Resources */,
 				03F55BB620626973009F8D3C /* Assets.xcassets in Resources */,
-				03F55C3820628E76009F8D3C /* Examine.storyboard in Resources */,
 				03F55C3E20628E9B009F8D3C /* Profile.storyboard in Resources */,
 				03F55C3C20628E91009F8D3C /* Message.storyboard in Resources */,
 				03C2EC732072800400BA63C3 /* LFMessageCell.xib in Resources */,
 				03F55C3420628E18009F8D3C /* Main.storyboard in Resources */,
+				0338DE702073D24900D53D53 /* Feedback.storyboard in Resources */,
+				0338DE6C2073CE1B00D53D53 /* Public.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -842,12 +807,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0338DE642073CAFE00D53D53 /* LFRepairViewModel.m in Sources */,
 				03F55C2820627574009F8D3C /* LFNavigationController.m in Sources */,
-				0346FC652071336A00AEE6FF /* LFHistoryRepairModel.m in Sources */,
+				0338DE7A2073D2EC00D53D53 /* LFExamineViewController.m in Sources */,
 				03C2EC622072798E00BA63C3 /* LFMessageViewController.m in Sources */,
+				0338DE5C2073CAEA00D53D53 /* LFRepairDetailModel.m in Sources */,
 				03C2EC5C207276E300BA63C3 /* LFPageViewController.m in Sources */,
 				0346FC252070BAE700AEE6FF /* LFLoginTool.m in Sources */,
-				0346FC752071410E00AEE6FF /* LFHistoryRepairViewModel.m in Sources */,
 				03C2EC6520727A3400BA63C3 /* LFMessageListViewController.m in Sources */,
 				03F55C2920627574009F8D3C /* LFTabBarController.m in Sources */,
 				0346FC472070D03400AEE6FF /* NSString+LFCategory.m in Sources */,
@@ -863,11 +829,15 @@
 				03F55BC5206269BE009F8D3C /* AppDelegate.m in Sources */,
 				0346FC3E2070C32600AEE6FF /* UIViewController+LFCategory.m in Sources */,
 				03C2EC762072801500BA63C3 /* LFMessageTool.m in Sources */,
+				0338DE672073CB3B00D53D53 /* LFRepairDetailViewController.m in Sources */,
 				0346FC2E2070BF1500AEE6FF /* MBProgressHUD.m in Sources */,
+				0338DE762073D27700D53D53 /* LFFeedbackViewController.m in Sources */,
 				0346FC502070E8A800AEE6FF /* LFRefreshFooter.m in Sources */,
 				0346FC5620711CD100AEE6FF /* LFProfileViewController.m in Sources */,
 				0346FC412070CD1500AEE6FF /* LFUser.m in Sources */,
+				0338DE482073C39C00D53D53 /* LFMessageDetailViewController.m in Sources */,
 				0346FC282070BB0300AEE6FF /* LFTools.m in Sources */,
+				0338DE5B2073CAEA00D53D53 /* LFRepairModel.m in Sources */,
 				03C2EC6E20727FED00BA63C3 /* LFMessageModel.m in Sources */,
 				03C2EC5F207276FE00BA63C3 /* LFTabView.m in Sources */,
 				0346FC6220712C2E00AEE6FF /* LFProfileTool.m in Sources */,
@@ -875,10 +845,10 @@
 				0346FC722071408100AEE6FF /* LFLoginViewModel.m in Sources */,
 				0346FC442070CD5500AEE6FF /* LFUserManager.m in Sources */,
 				03F55C42206297C3009F8D3C /* UIColor+LFCategory.m in Sources */,
+				0338DE602073CAF700D53D53 /* LFRepairCell.m in Sources */,
 				03C2EC6B20727FE100BA63C3 /* LFMessageViewModel.m in Sources */,
-				0346FC6920713C1800AEE6FF /* LFHistoryRepairCell.m in Sources */,
-				03C2EC522072629D00BA63C3 /* LFRepairViewController.m in Sources */,
-				03C2EC5620726E3D00BA63C3 /* LFRepairDetailModel.m in Sources */,
+				0338DE4E2073C98100D53D53 /* LFRepairViewController.m in Sources */,
+				0338DE6A2073CB5200D53D53 /* LFPublicTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
