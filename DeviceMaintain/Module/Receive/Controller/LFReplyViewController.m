@@ -144,6 +144,11 @@
         return [LFNotification autoHideWithText:@"请先选择厂家设备编号"];
     }
     
+    __weak typeof(self) weakSelf = self;
+    self.userVC.callback = ^(NSString *usersID, NSString *name) {
+        weakSelf.StaffIDsTextField.text = name;
+        weakSelf.usersID = usersID;
+    };
     self.userVC.tid = self.deviceModel.ClientID;
     self.userVC.rid = self.CodeTextField.text;
     LFPush(self.userVC);
@@ -235,13 +240,12 @@
 {
     if (!_userVC) {
         _userVC =LFSB_ViewController(LFReceiveSBName, LFUserViewController);
-        __weak typeof(self) weakSelf = self;
-        _userVC.callback = ^(NSString *usersID, NSString *name) {
-            weakSelf.StaffIDsTextField.text = name;
-            weakSelf.usersID = usersID;
-        };
     }
     return _userVC;
+}
+
+- (void)dealloc {
+    self.userVC = nil;
 }
 
 @end

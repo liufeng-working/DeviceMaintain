@@ -75,8 +75,4 @@
     return _userViewModel;
 }
 
-- (void)dealloc {
-    NSLog(@"%s", __func__);
-}
-
 @end
