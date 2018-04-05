@@ -9,6 +9,8 @@
 #import "LFReplyViewController.h"
 #import "LFApplyViewModel.h"
 #import "LFManufacturerNumberViewController.h"
+#import "LFReceiveTool.h"
+#import "LFUserViewController.h"
 
 @interface LFReplyViewController ()
 
@@ -20,55 +22,64 @@
 /** 报修单日期 */
 @property(nonatomic, weak) IBOutlet UITextField *RepairDateTextField;
 
+/** 设备厂家编号 */
+@property(nonatomic, weak) IBOutlet UITextField *Code1TextField;
+
+/** 设备客户编号 */
+@property(nonatomic, weak) IBOutlet UITextField *ClientCodeTextField;
+
+/** 设备型号 */
+@property(nonatomic, weak) IBOutlet UITextField *MacModelNameTextField;
+
+/** 出厂时间 */
+@property(nonatomic, weak) IBOutlet UITextField *FactoryTimeTextField;
+
+/** 控制系统 */
+@property(nonatomic, weak) IBOutlet UITextField *CtrlModelNameTextField;
+
+/** 客户名称 */
+@property(nonatomic, weak) IBOutlet UITextField *ClientNameTextField;
+
+/** 所属工厂 */
+@property(nonatomic, weak) IBOutlet UITextField *FactoryNameTextField;
+
+/** 所属车间 */
+@property(nonatomic, weak) IBOutlet UITextField *WorkShopNameTextField;
+
+/** 所属办事处 */
+@property(nonatomic, weak) IBOutlet UITextField *OfficeNameTextField;
+
+/** 客户联系方式 */
+@property(nonatomic, weak) IBOutlet UITextField *ClientMobileTextField;
+
+/** 保修期限 1 新机安装，2 保修期内 3 保修期外， 4非经销机床 */
+@property(nonatomic, weak) IBOutlet UITextField *WarrantyStatusTextField;
+
+/** 设备地址 */
+@property(nonatomic, weak) IBOutlet UITextField *MacAddressTextField;
+
 /** 报修人 */
 @property(nonatomic, weak) IBOutlet UITextField *RepairManTextField;
 
 /** 联系方式 */
 @property(nonatomic, weak) IBOutlet UITextField *ContactWayTextField;
 
-/** 设备id */
-@property(nonatomic, weak) IBOutlet UITextField *MachineIDTextField;
-
-/** 报修期限 1 新机安装，2 保修期内 3 保修期外， 4非经销机床 */
-@property(nonatomic, weak) IBOutlet UITextField *WarrantyStatusTextField;
-
-/** 客户id */
-@property(nonatomic, weak) IBOutlet UITextField *ClientIDTextField;
-
-/** 设备地址 */
-@property(nonatomic, weak) IBOutlet UITextField *MacAddressTextField;
-
 /** 故障描述 */
 @property(nonatomic, weak) IBOutlet UITextField *FaultDescriptionTextField;
 
-/** 报修单状态 */
-@property(nonatomic, weak) IBOutlet UITextField *StatusTextField;
-
-/** 记录来源 */
-@property(nonatomic, weak) IBOutlet UITextField *RecordSourceTextField;
-
 /** 备注 */
 @property(nonatomic, weak) IBOutlet UITextField *RemarkTextField;
-
-/** 故障定义主键 */
-@property(nonatomic, weak) IBOutlet UITextField *FaultDefinitionIDTextField;
-
-/** 客户名称 */
-@property(nonatomic, weak) IBOutlet UITextField *ClientNameTextField;
-
-/** 设备客户编号 */
-@property(nonatomic, weak) IBOutlet UITextField *ClientCodeTextField;
-
-/** 用户主键 */
-@property(nonatomic, weak) IBOutlet UITextField *UserIDTextField;
-
-/** 用户名称 */
-@property(nonatomic, weak) IBOutlet UITextField *UserNameTextField;
 
 /** 人员id列表 */
 @property(nonatomic, weak) IBOutlet UITextField *StaffIDsTextField;
 
 @property(nonatomic, strong) NSDate *date;
+
+@property(nonatomic, strong) LFDeviceModel *deviceModel;
+
+@property(nonatomic, strong) LFUserViewController *userVC;
+
+@property(nonatomic, copy) NSString *usersID;
 
 @end
 
@@ -97,8 +108,109 @@
 }
 
 - (IBAction)selectManufacturerNumber:(UITapGestureRecognizer *)sender {
-    LFManufacturerNumberViewController *vc = LFSB_ViewController(LFReceiveSBName, LFManufacturerNumberViewController);
-    LFPush(vc);
+    LFManufacturerNumberViewController *manufacturerNumberVC = LFSB_ViewController(LFReceiveSBName, LFManufacturerNumberViewController);
+    
+    __weak typeof(self) weakSelf = self;
+    manufacturerNumberVC.callback = ^(LFDeviceModel *deviceModel) {
+        weakSelf.Code1TextField.text = deviceModel.Code;
+        weakSelf.ClientCodeTextField.text = deviceModel.Code;
+        weakSelf.MacModelNameTextField.text = deviceModel.MacModelName;
+        weakSelf.FactoryTimeTextField.text = deviceModel.FactoryTime;
+        weakSelf.CtrlModelNameTextField.text = deviceModel.CtrlModelName;
+        weakSelf.ClientNameTextField.text = deviceModel.ClientName;
+        weakSelf.FactoryNameTextField.text = deviceModel.FactoryName;
+        weakSelf.WorkShopNameTextField.text = deviceModel.WorkShopName;
+        weakSelf.OfficeNameTextField.text = deviceModel.OfficeName;
+        weakSelf.ClientMobileTextField.text = deviceModel.ClientMobile;
+        
+        weakSelf.deviceModel = deviceModel;
+    };
+    LFPush(manufacturerNumberVC);
+}
+
+- (IBAction)selectWarrantyStatus:(UITapGestureRecognizer *)sender {
+    [self showAlertSheetWithTitle:@"保修期限" nameArray:LFReceiveTool.WarrantyStatusString withComplete:^(NSString * _Nonnull selectItem, NSInteger selectIndex) {
+        self.WarrantyStatusTextField.text = selectItem;
+    }];
+}
+
+- (IBAction)selectUser:(UIButton *)sender {
+    
+    if (self.CodeTextField.text.length <= 0) {
+        return [LFNotification autoHideWithText:@"请先生成报修单号"];
+    }
+    
+    if (self.deviceModel.ClientID.length <= 0) {
+        return [LFNotification autoHideWithText:@"请先选择厂家设备编号"];
+    }
+    
+    self.userVC.tid = self.deviceModel.ClientID;
+    self.userVC.rid = self.CodeTextField.text;
+    LFPush(self.userVC);
+}
+
+- (IBAction)commit:(UIButton *)sender {
+    [self.view endEditing:YES];
+    
+    if (!self.CodeTextField.text.length) {
+        return [LFNotification autoHideWithText:@"请先生成报修单号"];
+    }
+    
+    if (!self.RepairDateTextField.text.length) {
+        return [LFNotification autoHideWithText:@"请先选择报修时间"];
+    }
+    
+    if (!self.Code1TextField.text.length) {
+        return [LFNotification autoHideWithText:@"请先选择厂家编号"];
+    }
+    
+    if (!self.WarrantyStatusTextField.text.length) {
+        return [LFNotification autoHideWithText:@"请先选择报修期限"];
+    }
+    
+    if (!self.RepairManTextField.text.length) {
+        return [LFNotification autoHideWithText:@"请先填写报修人"];
+    }
+    
+    if (!self.FaultDescriptionTextField.text.length) {
+        return [LFNotification autoHideWithText:@"请先填写故障描述"];
+    }
+    
+    if (!self.StaffIDsTextField.text.length) {
+        return [LFNotification autoHideWithText:@"请先选择人员分配"];
+    }
+    
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    param[@"ID"] = @"";
+    param[@"Code"] = self.CodeTextField.text;
+    param[@"RepairDate"] = self.RepairDateTextField.text;
+    param[@"ClientCode"] = self.ClientCodeTextField.text;
+    param[@"ClientName"] = self.ClientNameTextField.text;
+    param[@"WarrantyStatus"] = [LFReceiveTool WarrantyStatus:self.WarrantyStatusTextField.text];
+    param[@"MacAddress"] = self.MacAddressTextField.text;
+    param[@"RepairMan"] = self.RepairManTextField.text;
+    param[@"ContactWay"] = self.ContactWayTextField.text;
+    param[@"FaultDescription"] = self.FaultDescriptionTextField.text;
+    param[@"MachineID"] = [NSUUID UUID].UUIDString;
+    param[@"Remark"] = self.RemarkTextField.text;
+    param[@"ClientID"] = self.deviceModel.ClientID;
+    param[@"Status"] = @0;
+    param[@"RecordSource"] = @2;
+    param[@"FaultDefinitionID"] = @"";
+    param[@"ClientCode"] = self.deviceModel.ClientCode;
+    param[@"UserID"] = [LFUserManager manager].user.UserID;
+    param[@"UserName"] = [LFUserManager manager].user.UserName;
+    param[@"StaffIDs"] = self.usersID;    
+    
+    [LFNotification manuallyHideWithText:@"正在处理"];
+    [self.applyViewModel submitRepairWithParam:param success:^ {
+        [LFNotification autoHideWithText:@"报修申请成功"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.navigationController popViewControllerAnimated:YES];
+        });
+    } failure:^{
+        [LFNotification autoHideWithText:@"报修申请失败，请重试"];
+    }];
 }
 
 #pragma mark -
@@ -117,6 +229,19 @@
         _date = [NSDate date];
     }
     return _date;
+}
+
+- (LFUserViewController *)userVC
+{
+    if (!_userVC) {
+        _userVC =LFSB_ViewController(LFReceiveSBName, LFUserViewController);
+        __weak typeof(self) weakSelf = self;
+        _userVC.callback = ^(NSString *usersID, NSString *name) {
+            weakSelf.StaffIDsTextField.text = name;
+            weakSelf.usersID = usersID;
+        };
+    }
+    return _userVC;
 }
 
 @end

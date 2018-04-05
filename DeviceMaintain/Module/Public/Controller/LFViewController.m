@@ -25,6 +25,7 @@ static inline void lf_exchangeInstanceMethod(Class class, SEL oldSelect, SEL new
 
 + (void)load {
     lf_exchangeInstanceMethod(self, @selector(viewDidLoad), @selector(lf_viewDidLoad));
+    lf_exchangeInstanceMethod(self, NSSelectorFromString(@"dealloc"), @selector(lf_dealloc));
 }
 
 - (void)lf_viewDidLoad {
@@ -33,9 +34,14 @@ static inline void lf_exchangeInstanceMethod(Class class, SEL oldSelect, SEL new
     if (self.isSystemViewController) { return; }
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.view.backgroundColor = LF_color_efeff4();;
+    self.view.backgroundColor = LF_color_efeff4();
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
+}
+
+- (void)lf_dealloc
+{
+    NSLog(@"%@被销毁了", self.class);
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {

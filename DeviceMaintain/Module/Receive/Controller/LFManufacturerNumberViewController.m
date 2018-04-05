@@ -10,7 +10,7 @@
 #import "LFApplyViewModel.h"
 #import "LFDeviceCell.h"
 
-@interface LFManufacturerNumberViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface LFManufacturerNumberViewController ()<UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *arrowButton;
 
@@ -23,6 +23,12 @@
 
 @property(nonatomic, assign) NSInteger page;
 
+@property(nonatomic, strong) NSArray<LFDeviceModel *> *allDevices;
+
+@property(nonatomic, assign) BOOL isCode;
+
+@property(nonatomic, strong) LFRefreshFooter *footer;
+
 @end
 
 @implementation LFManufacturerNumberViewController
@@ -32,44 +38,65 @@
     
     self.arrowButton.transform = CGAffineTransformMakeRotation(M_PI_2);
     
+    
     __weak typeof(self) weakSelf = self;
+    self.footer = [LFRefreshFooter footerWithRefreshingBlock:^{
+        [weakSelf.applyViewModel getDeviceListWithPage:1 success:^(NSArray<LFDeviceModel *> *devices) {
+            [weakSelf.tableView.mj_header endRefreshing];
+            [weakSelf.devices addObjectsFromArray:devices];
+            weakSelf.allDevices = weakSelf.devices;
+            [weakSelf.tableView reloadData];
+            weakSelf.page ++;
+        } failure:^{
+            [weakSelf.tableView.mj_header endRefreshing];
+            [LFNotification autoHideWithText:@"获取设备列表失败"];
+        }];
+    }];
+    self.tableView.mj_footer = self.footer;
+    
     self.tableView.mj_header = [LFRefreshHeader headerWithRefreshingBlock:^{
         [weakSelf.applyViewModel getDeviceListWithPage:1 success:^(NSArray<LFDeviceModel *> *devices) {
             [weakSelf.tableView.mj_header endRefreshing];
             weakSelf.devices = devices.mutableCopy;
+            weakSelf.allDevices = weakSelf.devices;
             [weakSelf.tableView reloadData];
-            self.page = 2;
+            weakSelf.page = 2;
+            weakSelf.tableView.mj_footer = weakSelf.footer;
         } failure:^{
-            [self.tableView.mj_header endRefreshing];
+            [weakSelf.tableView.mj_header endRefreshing];
             [LFNotification autoHideWithText:@"获取设备列表失败"];
         }];
     }];
     [self.tableView.mj_header beginRefreshing];
-    
-    self.tableView.mj_footer = [LFRefreshFooter footerWithRefreshingBlock:^{
-        [weakSelf.applyViewModel getDeviceListWithPage:1 success:^(NSArray<LFDeviceModel *> *devices) {
-            [weakSelf.tableView.mj_header endRefreshing];
-            [weakSelf.devices addObjectsFromArray:devices];
-            [weakSelf.tableView reloadData];
-            self.page ++;
-        } failure:^{
-            [self.tableView.mj_header endRefreshing];
-            [LFNotification autoHideWithText:@"获取设备列表失败"];
-        }];
-    }];
 }
 
 - (IBAction)arrowButtonClick:(UIButton *)sender {
     [self showAlertSheetWithTitle:@"查询参数" nameArray:@[@"客户编号", @"厂家编号"] withComplete:^(NSString * _Nonnull selectItem, NSInteger selectIndex) {
-        
+        self.isCode = selectIndex;
+        self.searchBar.placeholder = [NSString stringWithFormat:@"请输入%@", selectItem];
     }];
 }
 
 - (IBAction)search:(UIButton *)sender {
     if (self.searchBar.text) {
+        [self.view endEditing:YES];
+        self.tableView.mj_footer = nil;
+        if (self.isCode) {
+            NSPredicate *p = [NSPredicate predicateWithFormat:@"Code CONTAINS %@", self.searchBar.text];
+            self.devices = [self.allDevices filteredArrayUsingPredicate:p].mutableCopy;
+            
+        }else {
+            NSPredicate *p = [NSPredicate predicateWithFormat:@"MacModelName CONTAINS %@", self.searchBar.text];
+            self.devices = [self.allDevices filteredArrayUsingPredicate:p].mutableCopy;
+        }
         
+        [self.tableView reloadData];
+    }else {
+        [LFNotification autoHideWithText:@"请输入搜索关键词"];
     }
 }
+
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.devices.count;
@@ -79,6 +106,25 @@
     LFDeviceCell *cell = [LFDeviceCell deviceCellWithTableView:tableView];
     cell.deviceModel = self.devices[indexPath.row];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.callback) {
+        self.callback(self.devices[indexPath.row]);
+    }
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    if (searchBar.text.length == 0) {
+        self.devices = self.allDevices.mutableCopy;
+        self.tableView.mj_footer = self.footer;
+        [self.tableView reloadData];
+    }
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self search:nil];
 }
 
 #pragma mark -

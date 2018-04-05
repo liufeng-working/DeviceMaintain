@@ -119,7 +119,6 @@
 }
 
 - (void)dealloc {
-    NSLog(@"%s", __func__);
     [LFNotificationCenter removeObserver:self];
 }
 

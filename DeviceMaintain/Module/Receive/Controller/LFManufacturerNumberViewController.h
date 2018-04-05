@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LFDeviceModel.h"
 
 @interface LFManufacturerNumberViewController : UIViewController
+
+@property(nonatomic, copy) void(^callback)(LFDeviceModel *deviceModel);
 
 @end

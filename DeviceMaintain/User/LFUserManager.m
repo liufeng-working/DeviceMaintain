@@ -35,6 +35,4 @@ static LFUserManager *_manager = nil;
     return _manager;
 }
 
-
-
 @end

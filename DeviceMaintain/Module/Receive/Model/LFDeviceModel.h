@@ -35,9 +35,8 @@
  */
 @property(nonatomic, copy) NSString *WarrantyTime;
 
-
 /**
- 数控系统型号
+ 系统型号
  */
 @property(nonatomic, copy) NSString *CtrlModelName;
 

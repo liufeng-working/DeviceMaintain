@@ -28,8 +28,13 @@
 #define LFGetRepairCodeUrl LF_appendUrl(/api/CodeRule/GetRepairCode)
 
 // 获取设备列表
-#define LFGetGetDeviceUrl LF_appendUrl(/api/Device/GetGridJson)
+#define LFGetDeviceUrl LF_appendUrl(/api/Device/GetGridJson)
 
+// 获取设备列表
+#define LFGetUserUrl LF_appendUrl(/api/ClientUser/GetClientUserOnlyJson)
+
+// 获取设备列表
+#define LFSubmitUrl LF_appendUrl(/api/RepairOrder/SubmitRepairOrder)
 
 #define LF_appendUrl(path) [NSString stringWithFormat:@"http://%@%@", LFLoginTool.getIP, @#path]
 

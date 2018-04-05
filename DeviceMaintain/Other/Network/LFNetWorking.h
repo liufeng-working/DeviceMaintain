@@ -24,8 +24,9 @@
  *  @param success    成功回调
  *  @param failure    失败回调
  */
-+ (void)POSTWithParameters:(NSDictionary *)parameters
-                   success:(void (^)(id result))success
-                   failure:(void (^)(NSError *error))failure;
++ (void)POST:(NSString *)path
+  parameters:(NSDictionary *)parameters
+     success:(void (^)(id result))success
+     failure:(void (^)(NSError *error))failure;
 
 @end

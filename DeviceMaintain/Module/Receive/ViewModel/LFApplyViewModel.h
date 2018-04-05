@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "LFDeviceModel.h"
+#import "LFUserModel.h"
 
 @interface LFApplyViewModel : NSObject
 
@@ -23,4 +24,20 @@
 - (void)getDeviceListWithPage:(NSInteger)page
                     success:(void(^)(NSArray<LFDeviceModel *> *devices))success
                     failure:(void(^)(void))failure;
+
+/**
+ 人员分配
+ */
+- (void)getUserWithTid:(NSString *)tid
+                   rid:(NSString *)rid
+               success:(void(^)(NSArray<LFUserModel *> *users))success
+               failure:(void(^)(void))failure;
+
+/**
+ 提交报修单
+ */
+- (void)submitRepairWithParam:(NSDictionary *)param
+                      success:(void(^)(void))success
+                      failure:(void(^)(void))failure;
+
 @end

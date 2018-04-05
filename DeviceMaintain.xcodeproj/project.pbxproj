@@ -38,6 +38,12 @@
 		0346FC5F20712AA200AEE6FF /* UIBarButtonItem+LFCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0346FC5D20712AA200AEE6FF /* UIBarButtonItem+LFCategory.m */; };
 		0346FC6220712C2E00AEE6FF /* LFProfileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0346FC6120712C2E00AEE6FF /* LFProfileTool.m */; };
 		0346FC722071408100AEE6FF /* LFLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0346FC702071408100AEE6FF /* LFLoginViewModel.m */; };
+		0396054A207629C900412EAF /* LFReceiveTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 03960549207629C900412EAF /* LFReceiveTool.m */; };
+		0396054D20762D5D00412EAF /* LFUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0396054C20762D5D00412EAF /* LFUserViewController.m */; };
+		0396055120762E4D00412EAF /* LFUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0396054F20762E4D00412EAF /* LFUserCell.m */; };
+		0396055220762E4D00412EAF /* LFUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0396055020762E4D00412EAF /* LFUserCell.xib */; };
+		0396055520762E8700412EAF /* LFUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0396055420762E8700412EAF /* LFUserModel.m */; };
+		0396055820766F2C00412EAF /* NSArray+LFCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0396055720766F2C00412EAF /* NSArray+LFCategory.m */; };
 		03C2EC5C207276E300BA63C3 /* LFPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C2EC5A207276E300BA63C3 /* LFPageViewController.m */; };
 		03C2EC5F207276FE00BA63C3 /* LFTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C2EC5D207276FE00BA63C3 /* LFTabView.m */; };
 		03C2EC622072798E00BA63C3 /* LFMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C2EC612072798E00BA63C3 /* LFMessageViewController.m */; };
@@ -137,6 +143,17 @@
 		0346FC6C20713CE600AEE6FF /* LFFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFunction.h; sourceTree = "<group>"; };
 		0346FC702071408100AEE6FF /* LFLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFLoginViewModel.m; sourceTree = "<group>"; };
 		0346FC712071408100AEE6FF /* LFLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFLoginViewModel.h; sourceTree = "<group>"; };
+		03960548207629C900412EAF /* LFReceiveTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFReceiveTool.h; sourceTree = "<group>"; };
+		03960549207629C900412EAF /* LFReceiveTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFReceiveTool.m; sourceTree = "<group>"; };
+		0396054B20762D5D00412EAF /* LFUserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFUserViewController.h; sourceTree = "<group>"; };
+		0396054C20762D5D00412EAF /* LFUserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFUserViewController.m; sourceTree = "<group>"; };
+		0396054E20762E4D00412EAF /* LFUserCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFUserCell.h; sourceTree = "<group>"; };
+		0396054F20762E4D00412EAF /* LFUserCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFUserCell.m; sourceTree = "<group>"; };
+		0396055020762E4D00412EAF /* LFUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LFUserCell.xib; sourceTree = "<group>"; };
+		0396055320762E8700412EAF /* LFUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFUserModel.h; sourceTree = "<group>"; };
+		0396055420762E8700412EAF /* LFUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFUserModel.m; sourceTree = "<group>"; };
+		0396055620766F2C00412EAF /* NSArray+LFCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+LFCategory.h"; sourceTree = "<group>"; };
+		0396055720766F2C00412EAF /* NSArray+LFCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LFCategory.m"; sourceTree = "<group>"; };
 		03C2EC532072669C00BA63C3 /* LFStoryboardName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFStoryboardName.h; sourceTree = "<group>"; };
 		03C2EC5A207276E300BA63C3 /* LFPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFPageViewController.m; sourceTree = "<group>"; };
 		03C2EC5B207276E300BA63C3 /* LFPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFPageViewController.h; sourceTree = "<group>"; };
@@ -365,6 +382,8 @@
 				0346FC462070D03400AEE6FF /* NSString+LFCategory.m */,
 				0346FC5E20712AA200AEE6FF /* UIBarButtonItem+LFCategory.h */,
 				0346FC5D20712AA200AEE6FF /* UIBarButtonItem+LFCategory.m */,
+				0396055620766F2C00412EAF /* NSArray+LFCategory.h */,
+				0396055720766F2C00412EAF /* NSArray+LFCategory.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -503,6 +522,8 @@
 				03FEF0E32075F4FF007B8812 /* LFReplyViewController.m */,
 				03FEF0EB20760242007B8812 /* LFManufacturerNumberViewController.h */,
 				03FEF0EC20760242007B8812 /* LFManufacturerNumberViewController.m */,
+				0396054B20762D5D00412EAF /* LFUserViewController.h */,
+				0396054C20762D5D00412EAF /* LFUserViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -512,6 +533,8 @@
 			children = (
 				03FEF0EE20760B71007B8812 /* LFDeviceModel.h */,
 				03FEF0EF20760B71007B8812 /* LFDeviceModel.m */,
+				0396055320762E8700412EAF /* LFUserModel.h */,
+				0396055420762E8700412EAF /* LFUserModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -522,6 +545,9 @@
 				03FEF0F120760DB0007B8812 /* LFDeviceCell.h */,
 				03FEF0F220760DB0007B8812 /* LFDeviceCell.m */,
 				03FEF0F320760DB0007B8812 /* LFDeviceCell.xib */,
+				0396054E20762E4D00412EAF /* LFUserCell.h */,
+				0396054F20762E4D00412EAF /* LFUserCell.m */,
+				0396055020762E4D00412EAF /* LFUserCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -529,6 +555,8 @@
 		03F55C1520627464009F8D3C /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				03960548207629C900412EAF /* LFReceiveTool.h */,
+				03960549207629C900412EAF /* LFReceiveTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -765,6 +793,7 @@
 				0338DE612073CAF700D53D53 /* LFRepairCell.xib in Resources */,
 				0338DE732073D24E00D53D53 /* Examine.storyboard in Resources */,
 				03F55BB620626973009F8D3C /* Assets.xcassets in Resources */,
+				0396055220762E4D00412EAF /* LFUserCell.xib in Resources */,
 				03F55C3E20628E9B009F8D3C /* Profile.storyboard in Resources */,
 				03FEF0F520760DB0007B8812 /* LFDeviceCell.xib in Resources */,
 				03F55C3C20628E91009F8D3C /* Message.storyboard in Resources */,
@@ -864,6 +893,7 @@
 				0338DE672073CB3B00D53D53 /* LFRepairDetailViewController.m in Sources */,
 				0346FC2E2070BF1500AEE6FF /* MBProgressHUD.m in Sources */,
 				0338DE762073D27700D53D53 /* LFFeedbackViewController.m in Sources */,
+				0396055120762E4D00412EAF /* LFUserCell.m in Sources */,
 				0346FC502070E8A800AEE6FF /* LFRefreshFooter.m in Sources */,
 				0346FC5620711CD100AEE6FF /* LFProfileViewController.m in Sources */,
 				0346FC412070CD1500AEE6FF /* LFUser.m in Sources */,
@@ -873,14 +903,18 @@
 				03C2EC6E20727FED00BA63C3 /* LFMessageModel.m in Sources */,
 				03FEF0E72075FA90007B8812 /* LFApplyViewModel.m in Sources */,
 				03C2EC5F207276FE00BA63C3 /* LFTabView.m in Sources */,
+				0396055820766F2C00412EAF /* NSArray+LFCategory.m in Sources */,
 				0346FC6220712C2E00AEE6FF /* LFProfileTool.m in Sources */,
 				0346FC3B2070C04C00AEE6FF /* LFNetWorking.m in Sources */,
 				0346FC722071408100AEE6FF /* LFLoginViewModel.m in Sources */,
 				0346FC442070CD5500AEE6FF /* LFUserManager.m in Sources */,
+				0396054D20762D5D00412EAF /* LFUserViewController.m in Sources */,
 				03F55C42206297C3009F8D3C /* UIColor+LFCategory.m in Sources */,
 				0338DE602073CAF700D53D53 /* LFRepairCell.m in Sources */,
 				03C2EC6B20727FE100BA63C3 /* LFMessageViewModel.m in Sources */,
+				0396055520762E8700412EAF /* LFUserModel.m in Sources */,
 				03FEF0F420760DB0007B8812 /* LFDeviceCell.m in Sources */,
+				0396054A207629C900412EAF /* LFReceiveTool.m in Sources */,
 				0338DE4E2073C98100D53D53 /* LFRepairViewController.m in Sources */,
 				0338DE6A2073CB5200D53D53 /* LFPublicTool.m in Sources */,
 			);

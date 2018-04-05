@@ -21,13 +21,18 @@
     success:(void (^)(id result))success
     failure:(void (^)(NSError *error))failure
 {
+    if (LFLoginTool.getIP.length <= 0) {
+        [LFNotification autoHideWithText:@"请先配置ip地址"];
+        return failure([NSError new]);
+    }
+    
     if (![self handleNoReachable:failure]) {
         return;
     }
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager GET:path parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        [self handleResult:responseObject success:success];
+        [self handleResult:responseObject success:success failure:failure];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [self handleError:error failure:failure];
     }];
@@ -40,17 +45,23 @@
  *  @param success    成功回调
  *  @param failure    失败回调
  */
-+ (void)POSTWithParameters:(NSDictionary *)parameters
-                   success:(void (^)(id result))success
-                   failure:(void (^)(NSError *error))failure
++ (void)POST:(NSString *)path
+  parameters:(NSDictionary *)parameters
+     success:(void (^)(id result))success
+     failure:(void (^)(NSError *error))failure
 {
+    if (LFLoginTool.getIP.length <= 0) {
+        [LFNotification autoHideWithText:@"请先配置ip地址"];
+        return failure([NSError new]);
+    }
+    
     if (![self handleNoReachable:failure]) {
         return;
     }
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [manager POST:LFLoginTool.getIP parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        [self handleResult:responseObject success:success];
+    [manager POST:path parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [self handleResult:responseObject success:success failure:failure];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [self handleError:error failure:failure];
     }];
@@ -60,6 +71,7 @@
 #pragma mark - private私有方法
 + (void)handleResult:(NSDictionary *)result
              success:(void (^)(id result))success
+             failure:(void (^)(NSError *error))failure
 {
     [LFNotification hideNotification];
     BOOL isSuccess = [result[@"IsSuccess"] boolValue];
@@ -68,6 +80,9 @@
             success(result[@"Value"]);
         }
     }else {
+        if (failure) {
+            failure([NSError new]);
+        }
         [LFNotification autoHideWithText:result[@"Extensions"]];
     }
 }

@@ -9,5 +9,6 @@
 #import "UIViewController+LFCategory.h"
 #import "NSString+LFCategory.h"
 #import "UIBarButtonItem+LFCategory.h"
+#import "NSArray+LFCategory.h"
 
 #endif /* LFCategory_h */

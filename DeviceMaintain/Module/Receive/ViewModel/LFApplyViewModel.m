@@ -34,9 +34,47 @@
                     success:(void(^)(NSArray<LFDeviceModel *> *devices))success
                     failure:(void(^)(void))failure
 {
-    [LFNetWorking GET:LFGetGetDeviceUrl parameters:@{@"pagesize": @10, @"pageno": @(page), @"code": @"", @"clientcode": @"", @"cid": @"", @"type": @1} success:^(id result) {
+    [LFNetWorking GET:LFGetDeviceUrl parameters:@{@"pagesize": @10, @"pageno": @(page), @"code": @"", @"clientcode": @"", @"cid": @"", @"type": @1} success:^(id result) {
         if (success) {
             success([LFDeviceModel mj_objectArrayWithKeyValuesArray:result]);
+        }
+    } failure:^(NSError *error) {
+        if (failure) {
+            failure();
+        }
+    }];
+}
+
+/**
+ 人员分配
+ */
+- (void)getUserWithTid:(NSString *)tid
+                   rid:(NSString *)rid
+               success:(void(^)(NSArray<LFUserModel *> *users))success
+               failure:(void(^)(void))failure
+{
+    [LFNetWorking GET:LFGetUserUrl parameters:@{@"tid": tid, @"rid": rid} success:^(id result) {
+        if (success) {
+            success([LFUserModel mj_objectArrayWithKeyValuesArray:result]);
+        }
+    } failure:^(NSError *error) {
+        if (failure) {
+            failure();
+        }
+    }];
+}
+
+
+/**
+ 提交报修单
+ */
+- (void)submitRepairWithParam:(NSDictionary *)param
+                      success:(void(^)(void))success
+                      failure:(void(^)(void))failure
+{
+    [LFNetWorking POST:LFSubmitUrl parameters:param success:^(id result) {
+        if (success) {
+            success();
         }
     } failure:^(NSError *error) {
         if (failure) {

@@ -27,7 +27,7 @@
     
     __weak typeof(self) weakSelf = self;
     self.tableView.mj_header = [LFRefreshHeader headerWithRefreshingBlock:^{
-        [weakSelf.repaireViewModel repairListWithType:self.type success:^(NSArray<LFRepairModel *> *repairs) {
+        [weakSelf.repaireViewModel repairListWithType:weakSelf.type success:^(NSArray<LFRepairModel *> *repairs) {
             weakSelf.repairs = repairs;
             [weakSelf.tableView reloadData];
             [weakSelf.tableView.mj_header endRefreshing];
