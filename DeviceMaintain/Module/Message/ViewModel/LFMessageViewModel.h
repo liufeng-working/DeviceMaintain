@@ -9,15 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "LFMessageModel.h"
 
-typedef NS_ENUM(NSInteger, LFMessageType) {
-    LFMessageTypeUnread = 504,// 未读
-    LFMessageTypeRead   = 419,// 已读
-};
-
 @interface LFMessageViewModel : NSObject
 
-- (void)messagesWithType:(LFMessageType)type
-                 success:(void(^)(NSArray<LFMessageModel *> *messages))success
-                 failure:(void(^)(void))failure;
+- (void)messagesWithSuccess:(void(^)(NSArray<LFMessageModel *> *messages))success
+                    failure:(void(^)(void))failure;
+
+- (void)messageDetailWithId:(NSString *)messageId;
 
 @end

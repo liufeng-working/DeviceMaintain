@@ -33,7 +33,7 @@ static inline void lf_exchangeInstanceMethod(Class class, SEL oldSelect, SEL new
     if (self.isSystemViewController) { return; }
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.view.backgroundColor = [UIColor colorWithHexString:@"efeff4"];
+    self.view.backgroundColor = LF_color_efeff4();;
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
 }

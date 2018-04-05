@@ -157,3 +157,77 @@
 
 @end
 
+
+@implementation UIViewController (datePicker)
+
+/**
+ 展示一个时间选择器
+ 
+ @param sureBlock 确定回调
+ */
+- (LFDatePickerViewController *)showDatePickerWithSureBlock:(void(^)(NSString *dateStr, NSDate *date))sureBlock
+{
+    return [self showDatePickerWithDateFormat:nil datePickerMode:UIDatePickerModeDate sureBlock:sureBlock];
+}
+
+/**
+ 展示一个时间选择器
+ 
+ @param dateFormat 返回的时间字符串的格式
+ @param datePickerMode 时间选择器的样式
+ @param sureBlock 确定回调
+ */
+- (LFDatePickerViewController *)showDatePickerWithDateFormat:(NSString *)dateFormat datePickerMode:(UIDatePickerMode)datePickerMode sureBlock:(void(^)(NSString *dateStr, NSDate *date))sureBlock
+{
+    return [self showDatePickerWithCancelTitle:nil cancelColor:nil sureTitle:nil sureColor:nil dateFormat:nil datePickerMode:datePickerMode cancelBlock:nil sureBlock:sureBlock];
+}
+
+/**
+ 展示一个时间选择器
+ 
+ @param cancelTitle 取消按钮标题
+ @param cancelColor 取消按钮颜色
+ @param sureTitle 确定按钮
+ @param sureColor 确定按钮颜色
+ @param dateFormat 返回的时间字符串的格式
+ @param datePickerMode 时间选择器的样式
+ @param cancelBlock 取消回调
+ @param sureBlock 确定回调
+ */
+- (LFDatePickerViewController *)showDatePickerWithCancelTitle:(NSString *)cancelTitle cancelColor:(UIColor *)cancelColor sureTitle:(NSString *)sureTitle sureColor:(UIColor *)sureColor dateFormat:(NSString *)dateFormat datePickerMode:(UIDatePickerMode)datePickerMode cancelBlock:(void(^)(void))cancelBlock sureBlock:(void(^)(NSString *dateStr, NSDate *date))sureBlock
+{
+    LFDatePickerViewController *datePickerVC = [[LFDatePickerViewController alloc] init];
+    if (cancelTitle) {
+        datePickerVC.cancelTitle = cancelTitle;
+    }
+    
+    if (cancelColor) {
+        datePickerVC.cancelTitleColor = cancelColor;
+    }
+    
+    if (sureTitle) {
+        datePickerVC.sureTitle = sureTitle;
+    }
+    
+    if (sureColor) {
+        datePickerVC.sureTitleColor = sureColor;
+    }
+    
+    if (dateFormat) {
+        datePickerVC.dateFormat = dateFormat;
+    }
+    
+    if (cancelBlock) {
+        datePickerVC.cancel = cancelBlock;
+    }
+    
+    if (sureBlock) {
+        datePickerVC.sure = sureBlock;
+    }
+    
+    [self presentViewController:datePickerVC animated:YES completion:nil];
+    return datePickerVC;
+}
+
+@end
+

@@ -49,11 +49,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self.interactivePopGestureRecognizer.view addGestureRecognizer:self.popGestureRecognizer];
     
     self.interactivePopGestureRecognizer.enabled = NO;
     
-    self.navigationBar.translucent = NO;
+    self.navigationBar.translucent = YES;
 }
 
 //push时，隐藏底部TabBar

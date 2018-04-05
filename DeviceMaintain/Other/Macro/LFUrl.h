@@ -19,7 +19,17 @@
 #define LFRepairDetailUrl LF_appendUrl(/api/RepairOrder/GetRepairOrderDetail)
 
 // 消息
-#define LFMessageUrl LF_appendUrl( /api/Msg/GetUserMsgList)
+#define LFMessageUrl LF_appendUrl(/api/Msg/GetUserMsgList)
+
+// 消息详情
+#define LFMessageDetailUrl LF_appendUrl(/api/Msg/GetMsgDetail)
+
+// 获取报修单号
+#define LFGetRepairCodeUrl LF_appendUrl(/api/CodeRule/GetRepairCode)
+
+// 获取设备列表
+#define LFGetGetDeviceUrl LF_appendUrl(/api/Device/GetGridJson)
+
 
 #define LF_appendUrl(path) [NSString stringWithFormat:@"http://%@%@", LFLoginTool.getIP, @#path]
 

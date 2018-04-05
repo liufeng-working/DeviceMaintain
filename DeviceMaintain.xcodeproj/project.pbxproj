@@ -41,7 +41,6 @@
 		03C2EC5C207276E300BA63C3 /* LFPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C2EC5A207276E300BA63C3 /* LFPageViewController.m */; };
 		03C2EC5F207276FE00BA63C3 /* LFTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C2EC5D207276FE00BA63C3 /* LFTabView.m */; };
 		03C2EC622072798E00BA63C3 /* LFMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C2EC612072798E00BA63C3 /* LFMessageViewController.m */; };
-		03C2EC6520727A3400BA63C3 /* LFMessageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C2EC6420727A3400BA63C3 /* LFMessageListViewController.m */; };
 		03C2EC6B20727FE100BA63C3 /* LFMessageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C2EC6A20727FE100BA63C3 /* LFMessageViewModel.m */; };
 		03C2EC6E20727FED00BA63C3 /* LFMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C2EC6D20727FED00BA63C3 /* LFMessageModel.m */; };
 		03C2EC722072800400BA63C3 /* LFMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C2EC702072800400BA63C3 /* LFMessageCell.m */; };
@@ -61,6 +60,13 @@
 		03F55C3C20628E91009F8D3C /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F55C3B20628E91009F8D3C /* Message.storyboard */; };
 		03F55C3E20628E9B009F8D3C /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F55C3D20628E9B009F8D3C /* Profile.storyboard */; };
 		03F55C42206297C3009F8D3C /* UIColor+LFCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F55C41206297C2009F8D3C /* UIColor+LFCategory.m */; };
+		03FEF0E42075F4FF007B8812 /* LFReplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FEF0E32075F4FF007B8812 /* LFReplyViewController.m */; };
+		03FEF0E72075FA90007B8812 /* LFApplyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FEF0E62075FA90007B8812 /* LFApplyViewModel.m */; };
+		03FEF0EA2075FFA6007B8812 /* LFDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FEF0E82075FFA5007B8812 /* LFDatePickerViewController.m */; };
+		03FEF0ED20760242007B8812 /* LFManufacturerNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FEF0EC20760242007B8812 /* LFManufacturerNumberViewController.m */; };
+		03FEF0F020760B71007B8812 /* LFDeviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FEF0EF20760B71007B8812 /* LFDeviceModel.m */; };
+		03FEF0F420760DB0007B8812 /* LFDeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FEF0F220760DB0007B8812 /* LFDeviceCell.m */; };
+		03FEF0F520760DB0007B8812 /* LFDeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03FEF0F320760DB0007B8812 /* LFDeviceCell.xib */; };
 		8E5C5CB90A61EAA4EDD05865 /* libPods-DeviceMaintain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8BDFA41B82D956F6567764E /* libPods-DeviceMaintain.a */; };
 /* End PBXBuildFile section */
 
@@ -138,8 +144,6 @@
 		03C2EC5E207276FE00BA63C3 /* LFTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFTabView.h; sourceTree = "<group>"; };
 		03C2EC602072798300BA63C3 /* LFMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFMessageViewController.h; sourceTree = "<group>"; };
 		03C2EC612072798E00BA63C3 /* LFMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFMessageViewController.m; sourceTree = "<group>"; };
-		03C2EC6320727A3400BA63C3 /* LFMessageListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFMessageListViewController.h; sourceTree = "<group>"; };
-		03C2EC6420727A3400BA63C3 /* LFMessageListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFMessageListViewController.m; sourceTree = "<group>"; };
 		03C2EC6820727CCF00BA63C3 /* LFColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFColor.h; sourceTree = "<group>"; };
 		03C2EC6920727FE100BA63C3 /* LFMessageViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFMessageViewModel.h; sourceTree = "<group>"; };
 		03C2EC6A20727FE100BA63C3 /* LFMessageViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFMessageViewModel.m; sourceTree = "<group>"; };
@@ -174,6 +178,19 @@
 		03F55C40206297C2009F8D3C /* UIColor+LFCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+LFCategory.h"; sourceTree = "<group>"; };
 		03F55C41206297C2009F8D3C /* UIColor+LFCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+LFCategory.m"; sourceTree = "<group>"; };
 		03F55C44206297D7009F8D3C /* LFCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFCategory.h; sourceTree = "<group>"; };
+		03FEF0E22075F4FF007B8812 /* LFReplyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFReplyViewController.h; sourceTree = "<group>"; };
+		03FEF0E32075F4FF007B8812 /* LFReplyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFReplyViewController.m; sourceTree = "<group>"; };
+		03FEF0E52075FA90007B8812 /* LFApplyViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFApplyViewModel.h; sourceTree = "<group>"; };
+		03FEF0E62075FA90007B8812 /* LFApplyViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFApplyViewModel.m; sourceTree = "<group>"; };
+		03FEF0E82075FFA5007B8812 /* LFDatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFDatePickerViewController.m; sourceTree = "<group>"; };
+		03FEF0E92075FFA5007B8812 /* LFDatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFDatePickerViewController.h; sourceTree = "<group>"; };
+		03FEF0EB20760242007B8812 /* LFManufacturerNumberViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFManufacturerNumberViewController.h; sourceTree = "<group>"; };
+		03FEF0EC20760242007B8812 /* LFManufacturerNumberViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFManufacturerNumberViewController.m; sourceTree = "<group>"; };
+		03FEF0EE20760B71007B8812 /* LFDeviceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFDeviceModel.h; sourceTree = "<group>"; };
+		03FEF0EF20760B71007B8812 /* LFDeviceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFDeviceModel.m; sourceTree = "<group>"; };
+		03FEF0F120760DB0007B8812 /* LFDeviceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFDeviceCell.h; sourceTree = "<group>"; };
+		03FEF0F220760DB0007B8812 /* LFDeviceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFDeviceCell.m; sourceTree = "<group>"; };
+		03FEF0F320760DB0007B8812 /* LFDeviceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LFDeviceCell.xib; sourceTree = "<group>"; };
 		1ADAE15E981C45E473C39D9A /* Pods-DeviceMaintain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeviceMaintain.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeviceMaintain/Pods-DeviceMaintain.debug.xcconfig"; sourceTree = "<group>"; };
 		96859EB96395A088C769DFA6 /* Pods-DeviceMaintain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeviceMaintain.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeviceMaintain/Pods-DeviceMaintain.release.xcconfig"; sourceTree = "<group>"; };
 		D8BDFA41B82D956F6567764E /* libPods-DeviceMaintain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DeviceMaintain.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -421,8 +438,6 @@
 			children = (
 				03C2EC602072798300BA63C3 /* LFMessageViewController.h */,
 				03C2EC612072798E00BA63C3 /* LFMessageViewController.m */,
-				03C2EC6320727A3400BA63C3 /* LFMessageListViewController.h */,
-				03C2EC6420727A3400BA63C3 /* LFMessageListViewController.m */,
 				0338DE462073C39C00D53D53 /* LFMessageDetailViewController.h */,
 				0338DE472073C39C00D53D53 /* LFMessageDetailViewController.m */,
 			);
@@ -473,6 +488,8 @@
 		03F55C1120627464009F8D3C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				03FEF0E52075FA90007B8812 /* LFApplyViewModel.h */,
+				03FEF0E62075FA90007B8812 /* LFApplyViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -482,6 +499,10 @@
 			children = (
 				0346FC512070FB7700AEE6FF /* LFReceiveViewController.h */,
 				0346FC522070FB7700AEE6FF /* LFReceiveViewController.m */,
+				03FEF0E22075F4FF007B8812 /* LFReplyViewController.h */,
+				03FEF0E32075F4FF007B8812 /* LFReplyViewController.m */,
+				03FEF0EB20760242007B8812 /* LFManufacturerNumberViewController.h */,
+				03FEF0EC20760242007B8812 /* LFManufacturerNumberViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -489,6 +510,8 @@
 		03F55C1320627464009F8D3C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				03FEF0EE20760B71007B8812 /* LFDeviceModel.h */,
+				03FEF0EF20760B71007B8812 /* LFDeviceModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -496,6 +519,9 @@
 		03F55C1420627464009F8D3C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				03FEF0F120760DB0007B8812 /* LFDeviceCell.h */,
+				03FEF0F220760DB0007B8812 /* LFDeviceCell.m */,
+				03FEF0F320760DB0007B8812 /* LFDeviceCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -544,6 +570,8 @@
 				0338DE4D2073C98100D53D53 /* LFRepairViewController.m */,
 				0338DE652073CB3B00D53D53 /* LFRepairDetailViewController.h */,
 				0338DE662073CB3B00D53D53 /* LFRepairDetailViewController.m */,
+				03FEF0E92075FFA5007B8812 /* LFDatePickerViewController.h */,
+				03FEF0E82075FFA5007B8812 /* LFDatePickerViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -738,6 +766,7 @@
 				0338DE732073D24E00D53D53 /* Examine.storyboard in Resources */,
 				03F55BB620626973009F8D3C /* Assets.xcassets in Resources */,
 				03F55C3E20628E9B009F8D3C /* Profile.storyboard in Resources */,
+				03FEF0F520760DB0007B8812 /* LFDeviceCell.xib in Resources */,
 				03F55C3C20628E91009F8D3C /* Message.storyboard in Resources */,
 				03C2EC732072800400BA63C3 /* LFMessageCell.xib in Resources */,
 				03F55C3420628E18009F8D3C /* Main.storyboard in Resources */,
@@ -808,23 +837,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				0338DE642073CAFE00D53D53 /* LFRepairViewModel.m in Sources */,
+				03FEF0F020760B71007B8812 /* LFDeviceModel.m in Sources */,
 				03F55C2820627574009F8D3C /* LFNavigationController.m in Sources */,
 				0338DE7A2073D2EC00D53D53 /* LFExamineViewController.m in Sources */,
 				03C2EC622072798E00BA63C3 /* LFMessageViewController.m in Sources */,
 				0338DE5C2073CAEA00D53D53 /* LFRepairDetailModel.m in Sources */,
 				03C2EC5C207276E300BA63C3 /* LFPageViewController.m in Sources */,
 				0346FC252070BAE700AEE6FF /* LFLoginTool.m in Sources */,
-				03C2EC6520727A3400BA63C3 /* LFMessageListViewController.m in Sources */,
 				03F55C2920627574009F8D3C /* LFTabBarController.m in Sources */,
+				03FEF0ED20760242007B8812 /* LFManufacturerNumberViewController.m in Sources */,
 				0346FC472070D03400AEE6FF /* NSString+LFCategory.m in Sources */,
 				03C2EC722072800400BA63C3 /* LFMessageCell.m in Sources */,
 				0346FC2F2070BF1500AEE6FF /* LFNotification.m in Sources */,
 				03F55C30206281DD009F8D3C /* LFViewController.m in Sources */,
+				03FEF0EA2075FFA6007B8812 /* LFDatePickerViewController.m in Sources */,
 				0346FC532070FB7700AEE6FF /* LFReceiveViewController.m in Sources */,
 				03F55C2D20628197009F8D3C /* LFLoginViewController.m in Sources */,
 				03F55BC920626A1C009F8D3C /* main.m in Sources */,
 				0346FC4D2070E89600AEE6FF /* LFRefreshHeader.m in Sources */,
 				0346FC5F20712AA200AEE6FF /* UIBarButtonItem+LFCategory.m in Sources */,
+				03FEF0E42075F4FF007B8812 /* LFReplyViewController.m in Sources */,
 				0346FC5C2071238F00AEE6FF /* LFHistoryRepairViewController.m in Sources */,
 				03F55BC5206269BE009F8D3C /* AppDelegate.m in Sources */,
 				0346FC3E2070C32600AEE6FF /* UIViewController+LFCategory.m in Sources */,
@@ -839,6 +871,7 @@
 				0346FC282070BB0300AEE6FF /* LFTools.m in Sources */,
 				0338DE5B2073CAEA00D53D53 /* LFRepairModel.m in Sources */,
 				03C2EC6E20727FED00BA63C3 /* LFMessageModel.m in Sources */,
+				03FEF0E72075FA90007B8812 /* LFApplyViewModel.m in Sources */,
 				03C2EC5F207276FE00BA63C3 /* LFTabView.m in Sources */,
 				0346FC6220712C2E00AEE6FF /* LFProfileTool.m in Sources */,
 				0346FC3B2070C04C00AEE6FF /* LFNetWorking.m in Sources */,
@@ -847,6 +880,7 @@
 				03F55C42206297C3009F8D3C /* UIColor+LFCategory.m in Sources */,
 				0338DE602073CAF700D53D53 /* LFRepairCell.m in Sources */,
 				03C2EC6B20727FE100BA63C3 /* LFMessageViewModel.m in Sources */,
+				03FEF0F420760DB0007B8812 /* LFDeviceCell.m in Sources */,
 				0338DE4E2073C98100D53D53 /* LFRepairViewController.m in Sources */,
 				0338DE6A2073CB5200D53D53 /* LFPublicTool.m in Sources */,
 			);

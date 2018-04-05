@@ -6,8 +6,8 @@
 //  Copyright © 2018年 liufeng. All rights reserved.
 //
 
-#import "LFPageViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface LFMessageViewController : LFPageViewController
+@interface LFMessageViewController : UIViewController
 
 @end

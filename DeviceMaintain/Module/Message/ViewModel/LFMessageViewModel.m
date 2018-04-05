@@ -10,27 +10,27 @@
 
 @implementation LFMessageViewModel
 
-- (void)messagesWithType:(LFMessageType)type
-                 success:(void(^)(NSArray<LFMessageModel *> *messages))success
-                 failure:(void(^)(void))failure
+- (void)messagesWithSuccess:(void(^)(NSArray<LFMessageModel *> *messages))success
+                    failure:(void(^)(void))failure
 {
     [LFNetWorking GET:LFMessageUrl parameters:@{@"uid": [LFUserManager manager].user.UserID} success:^(id result) {
         if (success) {
             NSArray<LFMessageModel *> *t = [LFMessageModel mj_objectArrayWithKeyValuesArray:result];
-            NSArray *tempArr = [NSArray array];
-            if (type == LFMessageTypeUnread) {
-                NSPredicate *p = [NSPredicate predicateWithFormat:@"Status==0"];
-                tempArr = [t filteredArrayUsingPredicate:p];
-            }else if (type == LFMessageTypeRead) {
-                NSPredicate *p = [NSPredicate predicateWithFormat:@"Status==1"];
-                tempArr = [t filteredArrayUsingPredicate:p];
-            }
-            success(tempArr);
+            success(t);
         }
     } failure:^(NSError *error) {
         if (failure) {
             failure();
         }
+    }];
+}
+
+- (void)messageDetailWithId:(NSString *)messageId
+{
+    [LFNetWorking GET:LFMessageDetailUrl parameters:@{@"uid": [LFUserManager manager].user.UserID, @"Keyvalue": messageId} success:^(id result) {
+        
+    } failure:^(NSError *error) {
+        
     }];
 }
 
