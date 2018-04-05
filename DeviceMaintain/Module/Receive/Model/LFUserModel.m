@@ -10,4 +10,17 @@
 
 @implementation LFUserModel
 
+- (id)copyWithZone:(nullable NSZone *)zone {
+    LFUserModel *user = [[LFUserModel alloc] init];
+    user.UserID = self.UserID;
+    user.UserCode = self.UserCode;
+    user.UserName = self.UserName;
+    user.DepartmentID = self.DepartmentID;
+    user.DepartmentName = self.DepartmentName;
+    user.PostName = self.PostName;
+    user.Sex = self.Sex;
+    user.IsCheck = self.IsCheck;
+    return user;
+}
+
 @end

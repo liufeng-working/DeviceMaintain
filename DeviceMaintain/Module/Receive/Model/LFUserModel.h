@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LFUserModel : NSObject
+@interface LFUserModel : NSObject<NSCopying>
 
 /**
  用户主键
