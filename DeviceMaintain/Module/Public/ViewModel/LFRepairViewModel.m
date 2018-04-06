@@ -14,7 +14,7 @@
                    success:(void(^)(NSArray<LFRepairModel *> *repairs))success
                    failure:(void(^)(void))failure
 {
-    [LFNetWorking GET:LFRepairUrl parameters:@{@"code": @"", @"uid": [LFUserManager manager].user.UserID, @"status": @(type)} success:^(id result) {
+    [LFNetWorking GET:LFRepairUrl parameters:@{@"code": @"", @"uid": [LFUserManager manager].user.UserID, @"status": type ? @(type) : @""} success:^(id result) {
         if (success) {
             success([LFRepairModel mj_objectArrayWithKeyValuesArray:result]);
         }

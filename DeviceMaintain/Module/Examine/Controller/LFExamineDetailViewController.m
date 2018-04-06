@@ -58,6 +58,7 @@
         [LFNotification manuallyHideWithText:@"审核成功"];
         [LFNotificationCenter postNotificationName:LFExamineSuccessNotification object:nil];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [LFNotification hideNotification];
             [self.navigationController popToRootViewControllerAnimated:YES];
         });
     } failure:^{

@@ -64,6 +64,11 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (self.repairs.count) {
+        [self.nodataView hide];
+    }else {
+        [self.nodataView show];
+    }
     return self.repairs.count;
 }
 
@@ -84,7 +89,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     LFRepairDetailViewController *detailVC = LFSB_ViewController(LFPublicSBName, LFRepairDetailViewController);
     detailVC.repairM = self.repairs[indexPath.row];
-    detailVC.type = self.type;
+    detailVC.operationButtonTitle = self.operationButtonTitle;
+    detailVC.operationBlock = self.operationBlock;
     LFPush(detailVC);
 }
 

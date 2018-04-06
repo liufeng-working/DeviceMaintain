@@ -14,6 +14,9 @@
 		03159CB4207751E100402179 /* LFExamineDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03159CB3207751E100402179 /* LFExamineDetailModel.m */; };
 		03159CB8207751FC00402179 /* LFExamineViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03159CB7207751FC00402179 /* LFExamineViewModel.m */; };
 		03159CBC2077558400402179 /* LFExamineTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 03159CBB2077558400402179 /* LFExamineTool.m */; };
+		03159CC420777B9D00402179 /* LFFaultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03159CC320777B9D00402179 /* LFFaultModel.m */; };
+		03159CC720777BAF00402179 /* LFFeedbackViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03159CC620777BAF00402179 /* LFFeedbackViewModel.m */; };
+		03159CCA20778A7800402179 /* LFSolutionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03159CC920778A7800402179 /* LFSolutionViewController.m */; };
 		0338DE482073C39C00D53D53 /* LFMessageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0338DE472073C39C00D53D53 /* LFMessageDetailViewController.m */; };
 		0338DE4E2073C98100D53D53 /* LFRepairViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0338DE4D2073C98100D53D53 /* LFRepairViewController.m */; };
 		0338DE5B2073CAEA00D53D53 /* LFRepairModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0338DE572073CAEA00D53D53 /* LFRepairModel.m */; };
@@ -98,6 +101,12 @@
 		03159CBA2077558400402179 /* LFExamineTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFExamineTool.h; sourceTree = "<group>"; };
 		03159CBB2077558400402179 /* LFExamineTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFExamineTool.m; sourceTree = "<group>"; };
 		03159CBD2077607500402179 /* LFNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFNotification.h; sourceTree = "<group>"; };
+		03159CC220777B9D00402179 /* LFFaultModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFFaultModel.h; sourceTree = "<group>"; };
+		03159CC320777B9D00402179 /* LFFaultModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFFaultModel.m; sourceTree = "<group>"; };
+		03159CC520777BAF00402179 /* LFFeedbackViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFFeedbackViewModel.h; sourceTree = "<group>"; };
+		03159CC620777BAF00402179 /* LFFeedbackViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFFeedbackViewModel.m; sourceTree = "<group>"; };
+		03159CC820778A7800402179 /* LFSolutionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFSolutionViewController.h; sourceTree = "<group>"; };
+		03159CC920778A7800402179 /* LFSolutionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFSolutionViewController.m; sourceTree = "<group>"; };
 		0338DE462073C39C00D53D53 /* LFMessageDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFMessageDetailViewController.h; sourceTree = "<group>"; };
 		0338DE472073C39C00D53D53 /* LFMessageDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFMessageDetailViewController.m; sourceTree = "<group>"; };
 		0338DE4C2073C98100D53D53 /* LFRepairViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFRepairViewController.h; sourceTree = "<group>"; };
@@ -274,11 +283,51 @@
 			path = DeviceMaintain/Module/Examine/Tool;
 			sourceTree = SOURCE_ROOT;
 		};
+		03159CBE20777B7200402179 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				03159CC220777B9D00402179 /* LFFaultModel.h */,
+				03159CC320777B9D00402179 /* LFFaultModel.m */,
+			);
+			name = Model;
+			path = DeviceMaintain/Module/Feedback/Model;
+			sourceTree = SOURCE_ROOT;
+		};
+		03159CBF20777B7200402179 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			path = DeviceMaintain/Module/Feedback/View;
+			sourceTree = SOURCE_ROOT;
+		};
+		03159CC020777B7200402179 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				03159CC520777BAF00402179 /* LFFeedbackViewModel.h */,
+				03159CC620777BAF00402179 /* LFFeedbackViewModel.m */,
+			);
+			name = ViewModel;
+			path = DeviceMaintain/Module/Feedback/ViewModel;
+			sourceTree = SOURCE_ROOT;
+		};
+		03159CC120777B7300402179 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Tool;
+			path = DeviceMaintain/Module/Feedback/Tool;
+			sourceTree = SOURCE_ROOT;
+		};
 		0338DE6D2073D24800D53D53 /* Feedback */ = {
 			isa = PBXGroup;
 			children = (
 				0338DE6E2073D24800D53D53 /* Feedback.storyboard */,
 				0338DE6F2073D24800D53D53 /* Controller */,
+				03159CC020777B7200402179 /* ViewModel */,
+				03159CBE20777B7200402179 /* Model */,
+				03159CC120777B7300402179 /* Tool */,
+				03159CBF20777B7200402179 /* View */,
 			);
 			path = Feedback;
 			sourceTree = "<group>";
@@ -290,6 +339,8 @@
 				0338DE752073D27700D53D53 /* LFFeedbackViewController.m */,
 				03159CAB20774CC000402179 /* LFFeedbackDetailViewController.h */,
 				03159CAC20774CC000402179 /* LFFeedbackDetailViewController.m */,
+				03159CC820778A7800402179 /* LFSolutionViewController.h */,
+				03159CC920778A7800402179 /* LFSolutionViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -941,6 +992,7 @@
 				03C2EC722072800400BA63C3 /* LFMessageCell.m in Sources */,
 				0346FC2F2070BF1500AEE6FF /* LFNotification.m in Sources */,
 				03159CB4207751E100402179 /* LFExamineDetailModel.m in Sources */,
+				03159CC720777BAF00402179 /* LFFeedbackViewModel.m in Sources */,
 				03F55C30206281DD009F8D3C /* LFViewController.m in Sources */,
 				03FEF0EA2075FFA6007B8812 /* LFDatePickerViewController.m in Sources */,
 				0346FC532070FB7700AEE6FF /* LFReceiveViewController.m in Sources */,
@@ -964,6 +1016,7 @@
 				0346FC502070E8A800AEE6FF /* LFRefreshFooter.m in Sources */,
 				0346FC5620711CD100AEE6FF /* LFProfileViewController.m in Sources */,
 				0346FC412070CD1500AEE6FF /* LFUser.m in Sources */,
+				03159CC420777B9D00402179 /* LFFaultModel.m in Sources */,
 				0338DE482073C39C00D53D53 /* LFMessageDetailViewController.m in Sources */,
 				0346FC282070BB0300AEE6FF /* LFTools.m in Sources */,
 				0338DE5B2073CAEA00D53D53 /* LFRepairModel.m in Sources */,
@@ -971,6 +1024,7 @@
 				03FEF0E72075FA90007B8812 /* LFApplyViewModel.m in Sources */,
 				03C2EC5F207276FE00BA63C3 /* LFTabView.m in Sources */,
 				0396055820766F2C00412EAF /* NSArray+LFCategory.m in Sources */,
+				03159CCA20778A7800402179 /* LFSolutionViewController.m in Sources */,
 				0346FC6220712C2E00AEE6FF /* LFProfileTool.m in Sources */,
 				0346FC3B2070C04C00AEE6FF /* LFNetWorking.m in Sources */,
 				0346FC722071408100AEE6FF /* LFLoginViewModel.m in Sources */,

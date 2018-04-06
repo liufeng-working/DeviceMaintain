@@ -11,7 +11,7 @@
 @interface LFRepairDetailModel : NSObject
 
 /**
- 报修单编号
+ 报修单号
  */
 @property(nonatomic, copy) NSString *Code;
 

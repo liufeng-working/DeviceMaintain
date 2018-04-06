@@ -7,7 +7,6 @@
 //
 
 #import "LFRepairDetailViewController.h"
-#import "LFExamineDetailViewController.h"
 
 @interface LFRepairDetailViewController ()
 
@@ -40,8 +39,11 @@
     
     [self loadData];
     
-    self.operationButton.hidden = YES;
-    [self handleOperationButton];
+    if (self.operationButtonTitle.length) {
+        [self.operationButton setTitle:self.operationButtonTitle forState:UIControlStateNormal];
+    }else {
+        self.operationButton.hidden = YES;
+    }
 }
 
 - (IBAction)refreshClick:(UIBarButtonItem *)sender {
@@ -49,25 +51,8 @@
 }
 
 - (IBAction)operationClick:(UIButton *)sender {
-    switch (self.type) {
-        case LFRepairTypeReceive: {
-            LFExamineDetailViewController *examineDetailVC = LFSB_ViewController(LFExamineSBName, LFExamineDetailViewController);
-            examineDetailVC.ID = self.detailModel.ID;
-            LFPush(examineDetailVC);
-        }
-            break;
-        case LFRepairTypeFeedback: {
-            [self.operationButton setTitle:@"去反馈" forState:UIControlStateNormal];
-        }
-            break;
-        case LFRepairTypeExamine: {
-            [self.operationButton setTitle:@"去审核" forState:UIControlStateNormal];
-        }
-            break;
-        default: {
-            self.operationButton.hidden = YES;
-        }
-            break;
+    if (self.operationBlock) {
+        self.operationBlock(self.detailModel);
     }
 }
 
@@ -108,31 +93,6 @@
     }
     return _repaireViewModel;
 }
-
-#pragma mark -
-#pragma mark - private私有方法
-- (void)handleOperationButton
-{
-    switch (self.type) {
-        case LFRepairTypeReceive: {
-            [self.operationButton setTitle:@"去接收" forState:UIControlStateNormal];
-        }
-            break;
-        case LFRepairTypeFeedback: {
-            [self.operationButton setTitle:@"去反馈" forState:UIControlStateNormal];
-        }
-            break;
-        case LFRepairTypeExamine: {
-            [self.operationButton setTitle:@"去审核" forState:UIControlStateNormal];
-        }
-            break;
-        default: {
-            self.operationButton.hidden = YES;
-        }
-            break;
-    }
-}
-
 
 @end
 

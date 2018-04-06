@@ -13,6 +13,8 @@
 
 @property(nonatomic, strong) LFRepairModel *repairM;
 
-@property(nonatomic, assign) LFRepairType type;
+@property(nonatomic, copy) NSString *operationButtonTitle;
+
+@property(nonatomic, copy) void(^operationBlock)(LFRepairDetailModel *detailModel);
 
 @end

@@ -12,4 +12,7 @@
 // 审核成功后
 static NSString *const LFExamineSuccessNotification = @"LFExamineSuccessNotification";
 
+// 接收成功
+static NSString *const LFReceiveSuccessNotification = @"LFReceiveSuccessNotification";
+
 #endif /* LFNotification_h */

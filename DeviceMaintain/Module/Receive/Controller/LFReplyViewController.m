@@ -204,7 +204,7 @@
     param[@"FaultDefinitionID"] = @"";
     param[@"ClientCode"] = self.deviceModel.ClientCode;
     param[@"UserID"] = [LFUserManager manager].user.UserID;
-    param[@"UserName"] = [LFUserManager manager].user.UserName;
+    param[@"UserName"] = [LFUserManager manager].user.UserCode;
     param[@"StaffIDs"] = self.usersID;    
     
     [LFNotification manuallyHideWithText:@"正在处理"];

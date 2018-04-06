@@ -15,7 +15,8 @@ typedef NS_ENUM(NSInteger, LFRepairType) {
     LFRepairTypeFeedback = 2,// 待反馈
     LFRepairTypeExamine  = 3,// 待审核
     LFRepairTypeComment  = 4,// 待评价
-    LFRepairTypeHistory  = 5,// 历史
+    LFRepairTypeClose    = 5,// 关闭
+    LFRepairTypeHistory  = 0,// 历史
 };
 @interface LFRepairViewModel : NSObject
 

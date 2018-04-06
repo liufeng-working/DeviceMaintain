@@ -7,6 +7,7 @@
 //
 
 #import "LFExamineViewController.h"
+#import "LFExamineDetailViewController.h"
 
 @interface LFExamineViewController ()
 
@@ -18,6 +19,15 @@
     [super viewDidLoad];
  
     self.type = LFRepairTypeExamine;
+    self.operationButtonTitle = @"去审核";
+    
+    __weak typeof(self) weakSelf = self;
+    self.operationBlock = ^(LFRepairDetailModel *detailModel) {
+        LFExamineDetailViewController *examineDetailVC = LFSB_ViewController(LFExamineSBName, LFExamineDetailViewController);
+        examineDetailVC.ID = detailModel.ID;
+        [weakSelf.navigationController pushViewController:examineDetailVC animated:YES];
+    };
+    
     [LFNotificationCenter addObserver:self selector:@selector(refresh:) name:LFExamineSuccessNotification object:nil];
 }
 

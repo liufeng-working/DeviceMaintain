@@ -53,7 +53,7 @@
                success:(void(^)(NSArray<LFUserModel *> *users))success
                failure:(void(^)(void))failure
 {
-    [LFNetWorking GET:LFGetUserUrl parameters:@{@"tid": tid, @"rid": rid} success:^(id result) {
+    [LFNetWorking GET:tid ? LFGetUserUrl : LFGetUserRepairUrl parameters:@{@"tid": tid ?: @"", @"rid": rid} success:^(id result) {
         if (success) {
             success([[LFUserModel mj_objectArrayWithKeyValuesArray:result] map:^id _Nonnull(LFUserModel *obj) {
                 obj.IsCheck = YES;
@@ -67,7 +67,6 @@
     }];
 }
 
-
 /**
  提交报修单
  */
@@ -76,6 +75,24 @@
                       failure:(void(^)(void))failure
 {
     [LFNetWorking POST:LFSubmitUrl parameters:param success:^(id result) {
+        if (success) {
+            success();
+        }
+    } failure:^(NSError *error) {
+        if (failure) {
+            failure();
+        }
+    }];
+}
+
+/**
+ 接收报修单
+ */
+- (void)receiveWithId:(NSString *)ID
+              success:(void(^)(void))success
+              failure:(void(^)(void))failure
+{
+    [LFNetWorking POST:LFReceiveUrl parameters:@{@"repairID": ID, @"userID": [LFUserManager manager].user.UserID, @"userName": [LFUserManager manager].user.UserCode} success:^(id result) {
         if (success) {
             success();
         }

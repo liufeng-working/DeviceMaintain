@@ -27,7 +27,7 @@ LFCell_implementation(repair, LFRepairCell);
 {
     _repairModel = repairModel;
     
-    self.iconImageView.image = [UIImage imageNamed:@"ic_news_machine"];
+    self.iconImageView.image = [UIImage imageNamed:@"ic_news_client"];
     self.numberLabel.text = [NSString stringWithFormat:@"报修单号：%@", repairModel.RepairCode];
     self.codeLabel.text = repairModel.ClientCode;
     self.endLabel.text = repairModel.statusString;

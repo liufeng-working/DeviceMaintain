@@ -30,7 +30,7 @@
               success:(void(^)(void))success
               failure:(void(^)(void))failure
 {
-    [LFNetWorking POST:LFExamineUrl parameters:@{@"RepairID": ID, @"UserID": [LFUserManager manager].user.UserID, @"UserName": [LFUserManager manager].user.UserName, @"AuditRemark": msg} success:^(id result) {
+    [LFNetWorking POST:LFExamineUrl parameters:@{@"RepairID": ID, @"UserID": [LFUserManager manager].user.UserID, @"UserName": [LFUserManager manager].user.UserCode, @"AuditRemark": msg} success:^(id result) {
         if (success) {
             success();
         }

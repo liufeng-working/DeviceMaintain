@@ -30,17 +30,24 @@
 // 获取设备列表
 #define LFGetDeviceUrl LF_appendUrl(/api/Device/GetGridJson)
 
-// 获取设备列表
+// 获取用户列表
 #define LFGetUserUrl LF_appendUrl(/api/ClientUser/GetClientUserOnlyJson)
+#define LFGetUserRepairUrl LF_appendUrl(/api/ClientUser/GetClientUserRepairJson)
 
-// 获取设备列表
+// 提交
 #define LFSubmitUrl LF_appendUrl(/api/RepairOrder/SubmitRepairOrder)
+
+// 接收报修单
+#define LFReceiveUrl LF_appendUrl(/api/RepairOrder/AcceptRepairOrder)
 
 // 报修单审核详情
 #define LFExamineDetailUrl LF_appendUrl(/api/MaintOrder/GetMaintOrderDetail)
 
 // 报修单审核
 #define LFExamineUrl LF_appendUrl(/api/MaintOrder/AuditMaintOrder)
+
+// 故障分类
+#define LFFaultUrl LF_appendUrl( /api/FaultType/GetSelectJson)
 
 #define LF_appendUrl(path) [NSString stringWithFormat:@"http://%@%@", LFLoginTool.getIP, @#path]
 

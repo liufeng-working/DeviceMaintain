@@ -40,4 +40,11 @@
                       success:(void(^)(void))success
                       failure:(void(^)(void))failure;
 
+/**
+ 接收报修单
+ */
+- (void)receiveWithId:(NSString *)ID
+              success:(void(^)(void))success
+              failure:(void(^)(void))failure;
+
 @end

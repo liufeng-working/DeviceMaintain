@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LFFeedbackDetailViewController : UIViewController
+@class LFRepairDetailModel;
+@interface LFFeedbackDetailViewController : UITableViewController
+
+@property(nonatomic, strong) LFRepairDetailModel *repairDetailModel;
 
 @end
