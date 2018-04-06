@@ -30,7 +30,7 @@
                     <navigationItem key="navigationItem" title="待反馈" id="Den-9C-zmG"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="UtC-WD-1lC" kind="show" id="wA5-OC-MMu"/>
+                        <segue destination="UtC-WD-1lC" kind="show" identifier="LFFeedbackDetailViewController" id="wA5-OC-MMu"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7XF-CR-qBL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -446,7 +446,7 @@
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="JEj-wR-EnS" secondAttribute="bottom" constant="15" id="Fhn-VY-EXX"/>
                                                 <constraint firstItem="WDc-3b-zDx" firstAttribute="trailing" secondItem="lNd-M1-xZk" secondAttribute="trailing" id="OAv-mS-4w5"/>
                                                 <constraint firstItem="lNd-M1-xZk" firstAttribute="top" secondItem="zA9-6J-YUo" secondAttribute="top" constant="15" id="OP3-7f-lgx"/>
-                                                <constraint firstItem="WDc-3b-zDx" firstAttribute="top" relation="greaterThanOrEqual" secondItem="lNd-M1-xZk" secondAttribute="bottom" constant="15" id="RlL-Yx-zDW"/>
+                                                <constraint firstItem="WDc-3b-zDx" firstAttribute="top" relation="greaterThanOrEqual" secondItem="lNd-M1-xZk" secondAttribute="bottom" id="RlL-Yx-zDW"/>
                                                 <constraint firstItem="JEj-wR-EnS" firstAttribute="centerY" secondItem="lNd-M1-xZk" secondAttribute="centerY" id="Xap-rF-sMa"/>
                                                 <constraint firstItem="WDc-3b-zDx" firstAttribute="leading" secondItem="lNd-M1-xZk" secondAttribute="leading" id="Xhq-CO-edb"/>
                                                 <constraint firstAttribute="bottom" secondItem="WDc-3b-zDx" secondAttribute="bottom" id="boJ-hw-pat"/>
@@ -622,7 +622,7 @@
                         <outlet property="faultNameTextfield" destination="mxy-hM-ChY" id="HF8-Up-prL"/>
                         <outlet property="serverNameTextField" destination="3Vg-ME-8de" id="lOD-97-Or3"/>
                         <outlet property="startTimeTextField" destination="8OD-hZ-TzB" id="xp8-Bc-oWk"/>
-                        <segue destination="r92-EG-cAm" kind="show" id="9KZ-F0-ndA"/>
+                        <segue destination="r92-EG-cAm" kind="show" identifier="LFSolutionViewController" id="9KZ-F0-ndA"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ka-7x-Fvi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -641,7 +641,11 @@
                         <action selector="selectEndTime" destination="UtC-WD-1lC" id="Rbt-Gg-Ggg"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="FDu-FQ-dBP"/>
+                <tapGestureRecognizer id="FDu-FQ-dBP" userLabel="result">
+                    <connections>
+                        <action selector="repairResult" destination="UtC-WD-1lC" id="lyy-Mn-zY2"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1037.5999999999999" y="214.54272863568218"/>
         </scene>
@@ -649,11 +653,11 @@
         <scene sceneID="QX1-hg-2E9">
             <objects>
                 <collectionViewController storyboardIdentifier="LFSolutionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r92-EG-cAm" customClass="LFSolutionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="eCl-BP-VZi">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" id="eCl-BP-VZi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sME-LB-bLO">
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="sME-LB-bLO">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>

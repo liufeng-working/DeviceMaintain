@@ -31,7 +31,7 @@
                     <navigationItem key="navigationItem" title="待接收" id="drK-Yr-o3M">
                         <barButtonItem key="rightBarButtonItem" image="ic_btn_add" id="ORU-I5-YDd">
                             <connections>
-                                <segue destination="1kb-20-EqL" kind="show" id="VZu-56-umf"/>
+                                <segue destination="1kb-20-EqL" kind="show" identifier="LFReplyViewController" id="VZu-56-umf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -39,7 +39,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iv2-bx-9PM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="385" y="129"/>
+            <point key="canvasLocation" x="635" y="129"/>
         </scene>
         <!--报修申请-->
         <scene sceneID="MDw-TR-Emu">
@@ -971,8 +971,8 @@
                         <outlet property="StaffIDsTextField" destination="Dqs-tK-cNs" id="A4e-Pv-aCq"/>
                         <outlet property="WarrantyStatusTextField" destination="3xJ-9S-EDR" id="pUj-uS-R0O"/>
                         <outlet property="WorkShopNameTextField" destination="30P-yy-dk2" id="gc7-df-vBg"/>
-                        <segue destination="Jaf-hY-sEh" kind="show" id="nHn-n2-XXR"/>
-                        <segue destination="fex-0P-kP1" kind="show" id="TEL-cb-7ax"/>
+                        <segue destination="Jaf-hY-sEh" kind="show" identifier="LFManufacturerNumberViewController" id="nHn-n2-XXR"/>
+                        <segue destination="fex-0P-kP1" kind="show" identifier="LFUserViewController" id="TEL-cb-7ax"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M8C-GZ-GZV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1118,7 +1118,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="glk-df-uKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-567" y="129"/>
+            <point key="canvasLocation" x="12" y="129"/>
         </scene>
     </scenes>
     <resources>

@@ -52,7 +52,7 @@
 
 - (IBAction)operationClick:(UIButton *)sender {
     if (self.operationBlock) {
-        self.operationBlock(self.detailModel);
+        self.operationBlock(self.detailModel, self.repairM);
     }
 }
 

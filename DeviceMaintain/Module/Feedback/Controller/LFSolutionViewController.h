@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LFFeedbackViewModel.h"
 
 @interface LFSolutionViewController : UICollectionViewController
+
+@property(nonatomic, copy) void(^callback)(LFSolutionModel *solutionModel);
 
 @end

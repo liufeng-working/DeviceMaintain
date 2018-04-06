@@ -13,4 +13,6 @@
 
 @property(nonatomic, strong) LFRepairDetailModel *repairDetailModel;
 
+@property(nonatomic, copy) NSString *RepairCode;
+
 @end

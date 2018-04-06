@@ -106,7 +106,7 @@
                     <connections>
                         <outlet property="firstButton" destination="8FU-Xl-dLE" id="ySS-Ss-Gua"/>
                         <outlet property="tableView" destination="63c-KG-grL" id="9fm-s7-hMO"/>
-                        <segue destination="KpL-v8-Fgb" kind="show" id="kW9-ML-JMk"/>
+                        <segue destination="KpL-v8-Fgb" kind="show" identifier="LFMessageDetailViewController" id="kW9-ML-JMk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rfn-qi-A1l" userLabel="First Responder" sceneMemberID="firstResponder"/>

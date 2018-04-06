@@ -22,7 +22,7 @@
     self.operationButtonTitle = @"去审核";
     
     __weak typeof(self) weakSelf = self;
-    self.operationBlock = ^(LFRepairDetailModel *detailModel) {
+    self.operationBlock = ^(LFRepairDetailModel *detailModel, LFRepairModel *repairModel) {
         LFExamineDetailViewController *examineDetailVC = LFSB_ViewController(LFExamineSBName, LFExamineDetailViewController);
         examineDetailVC.ID = detailModel.ID;
         [weakSelf.navigationController pushViewController:examineDetailVC animated:YES];

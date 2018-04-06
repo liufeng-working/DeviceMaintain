@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "LFFaultModel.h"
+#import "LFSolutionModel.h"
 
 @interface LFFeedbackViewModel : NSObject
 
@@ -16,5 +17,19 @@
  */
 - (void)getFaults:(void(^)(NSArray<LFFaultModel *> *faults))success
           failure:(void(^)(void))failure;
+
+/**
+ 智能方案
+ */
+- (void)faultSolution:(void(^)(NSArray<LFSolutionModel *> *solutions))success
+              failure:(void(^)(void))failure;
+
+/**
+ 反馈
+ */
+- (void)feedback:(NSDictionary *)param
+         success:(void(^)(void))success
+         failure:(void(^)(void))failure;
+
 
 @end

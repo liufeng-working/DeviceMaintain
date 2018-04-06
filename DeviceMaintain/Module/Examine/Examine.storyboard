@@ -26,7 +26,7 @@
                     <navigationItem key="navigationItem" title="待审核" id="UmP-Pv-D0X"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="dfK-9Q-ITd" kind="show" id="B9b-Rf-qr7"/>
+                        <segue destination="dfK-9Q-ITd" kind="show" identifier="LFExamineDetailViewController" id="B9b-Rf-qr7"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gJd-CH-B0H" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -236,7 +236,7 @@
                         <viewLayoutGuide key="safeArea" id="Gdy-3k-0a7"/>
                     </view>
                     <navigationItem key="navigationItem" title="审核" id="7sA-fA-iR1">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="BVt-dH-uTh">
+                        <barButtonItem key="rightBarButtonItem" id="BVt-dH-uTh">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UE6-9W-2sE">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

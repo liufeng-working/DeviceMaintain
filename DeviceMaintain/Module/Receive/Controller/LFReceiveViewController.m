@@ -25,7 +25,7 @@
     self.type = LFRepairTypeReceive;
     self.operationButtonTitle = @"接收";
     __weak typeof(self) weakSelf = self;
-    self.operationBlock = ^(LFRepairDetailModel *detailModel) {
+    self.operationBlock = ^(LFRepairDetailModel *detailModel, LFRepairModel *repairModel) {
         [LFNotification manuallyHideIndicatorWithText:@"正在处理"];
         [weakSelf.applyViewModel receiveWithId:detailModel.ID success:^{
             [LFNotification manuallyHideWithText:@"接收成功"];

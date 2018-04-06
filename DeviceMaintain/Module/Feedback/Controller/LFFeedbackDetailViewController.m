@@ -66,9 +66,19 @@
     }];
 }
 
+- (IBAction)repairResult {
+    [self showAlertSheetWithTitle:@"维修结果" nameArray:@[@"完成此工作", @"机床正常运行", @"有待跟进"] withComplete:^(NSString * _Nonnull selectItem, NSInteger selectIndex) {
+        self.MaintResultTextField.text = selectItem;
+    }];
+}
+
 - (IBAction)solutionWay:(UIButton *)sender {
     LFSolutionViewController *solutionVC = LFSB_ViewController(LFFeedbackSBName, LFSolutionViewController);
     LFPush(solutionVC);
+    
+    solutionVC.callback = ^(LFSolutionModel *solutionModel) {
+        self.SolveWayTextView.text = solutionModel.WayContent;
+    };
 }
 
 - (IBAction)selectUsers:(UIButton *)sender {
@@ -84,7 +94,64 @@
 }
 
 - (IBAction)feedback:(UIButton *)sender {
+    if (!self.faultNameTextfield.text.length) {
+        return [LFNotification autoHideWithText:@"请填写故障分类"];
+    }
     
+    if (!self.serverNameTextField.text.length) {
+        return [LFNotification autoHideWithText:@"请填写售后人员"];
+    }
+    
+    if (!self.startTimeTextField.text.length) {
+        return [LFNotification autoHideWithText:@"请选择维修员到场时间"];
+    }
+    
+    if (!self.endTimeTextField.text.length) {
+        return [LFNotification autoHideWithText:@"请选择维修员离场时间"];
+    }
+    
+    if (!self.MaintResultTextField.text.length) {
+        return [LFNotification autoHideWithText:@"请填写维修结果"];
+    }
+    
+    if (!self.faultNameTextfield.text.length) {
+        return [LFNotification autoHideWithText:@"请填写故障原因分析"];
+    }
+    
+    if (!self.SolveWayTextView.text.length) {
+        return [LFNotification autoHideWithText:@"请输入或者选择一个解决方案"];
+    }
+    
+    if (!self.StaffIDsTextField.text.length) {
+        return [LFNotification autoHideWithText:@"请选择人员分配"];
+    }
+    
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    param[@"ArriveTime"] = self.startTimeTextField.text;
+    param[@"ClientID"] = [LFUserManager manager].user.ClientID;
+    param[@"FaultReason"] = self.FaultReasonTextField.text;
+    param[@"FaultTypeID"] = @"5cd717d0-45f1-40ef-92d2-fc331dc54bab";
+    param[@"ID"] = self.repairDetailModel.MaintID;
+    param[@"LeaveTime"] = self.endTimeTextField.text;
+    param[@"MaintResult"] = self.MaintResultTextField.text;
+    param[@"RepairCode"] = self.RepairCode;
+    param[@"RepairID"] = self.repairDetailModel.ID;
+    param[@"SolveWay"] = self.SolveWayTextView.text;
+    param[@"StaffIDs"] = self.usersID;
+    param[@"Suggest"] = self.SuggestTextField.text;
+    param[@"UserID"] = [LFUserManager manager].user.UserID;
+    param[@"UserName"] = [LFUserManager manager].user.UserCode;
+          
+    [self.feedbackViewModel feedback:param success:^{
+        [LFNotification manuallyHideWithText:@"反馈成功"];
+        [LFNotificationCenter postNotificationName:LFFeedbackSuccessNotification object:nil];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [LFNotification hideNotification];
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        });
+    } failure:^{
+        [LFNotification autoHideWithText:@"操作失败，请重试"];
+    }];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

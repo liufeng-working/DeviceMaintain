@@ -47,7 +47,13 @@
 #define LFExamineUrl LF_appendUrl(/api/MaintOrder/AuditMaintOrder)
 
 // 故障分类
-#define LFFaultUrl LF_appendUrl( /api/FaultType/GetSelectJson)
+#define LFFaultUrl LF_appendUrl(/api/FaultType/GetSelectJson)
+
+// 智能方案
+#define LFSolutionUrl LF_appendUrl(/api/FaultSolution)
+
+// 智能方案
+#define LFFeedbackUrl LF_appendUrl(/api/MaintOrder/FeedbackMaintOrder)
 
 #define LF_appendUrl(path) [NSString stringWithFormat:@"http://%@%@", LFLoginTool.getIP, @#path]
 

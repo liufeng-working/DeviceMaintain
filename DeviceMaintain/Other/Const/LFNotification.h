@@ -15,4 +15,7 @@ static NSString *const LFExamineSuccessNotification = @"LFExamineSuccessNotifica
 // 接收成功
 static NSString *const LFReceiveSuccessNotification = @"LFReceiveSuccessNotification";
 
+// 接收成功
+static NSString *const LFFeedbackSuccessNotification = @"LFFeedbackSuccessNotification";
+
 #endif /* LFNotification_h */

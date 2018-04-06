@@ -22,9 +22,10 @@
     self.type = LFRepairTypeFeedback;
     self.operationButtonTitle = @"去反馈";
     __weak typeof(self) weakSelf = self;
-    self.operationBlock = ^(LFRepairDetailModel *detailModel) {
+    self.operationBlock = ^(LFRepairDetailModel *detailModel, LFRepairModel *repairModel) {
         LFFeedbackDetailViewController *feedbackDetailVC = LFSB_ViewController(LFFeedbackSBName, LFFeedbackDetailViewController);
         feedbackDetailVC.repairDetailModel = detailModel;
+        feedbackDetailVC.RepairCode = repairModel.RepairCode;
         [weakSelf.navigationController pushViewController:feedbackDetailVC animated:YES];
     };
 }

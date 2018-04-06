@@ -17,6 +17,9 @@
 		03159CC420777B9D00402179 /* LFFaultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03159CC320777B9D00402179 /* LFFaultModel.m */; };
 		03159CC720777BAF00402179 /* LFFeedbackViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03159CC620777BAF00402179 /* LFFeedbackViewModel.m */; };
 		03159CCA20778A7800402179 /* LFSolutionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03159CC920778A7800402179 /* LFSolutionViewController.m */; };
+		03159CCD2077BDDB00402179 /* LFSolutionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03159CCC2077BDDB00402179 /* LFSolutionModel.m */; };
+		03159CD12077C03300402179 /* LFSolutionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03159CCF2077C03300402179 /* LFSolutionCell.m */; };
+		03159CD22077C03300402179 /* LFSolutionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03159CD02077C03300402179 /* LFSolutionCell.xib */; };
 		0338DE482073C39C00D53D53 /* LFMessageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0338DE472073C39C00D53D53 /* LFMessageDetailViewController.m */; };
 		0338DE4E2073C98100D53D53 /* LFRepairViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0338DE4D2073C98100D53D53 /* LFRepairViewController.m */; };
 		0338DE5B2073CAEA00D53D53 /* LFRepairModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0338DE572073CAEA00D53D53 /* LFRepairModel.m */; };
@@ -107,6 +110,11 @@
 		03159CC620777BAF00402179 /* LFFeedbackViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFFeedbackViewModel.m; sourceTree = "<group>"; };
 		03159CC820778A7800402179 /* LFSolutionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFSolutionViewController.h; sourceTree = "<group>"; };
 		03159CC920778A7800402179 /* LFSolutionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFSolutionViewController.m; sourceTree = "<group>"; };
+		03159CCB2077BDDB00402179 /* LFSolutionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFSolutionModel.h; sourceTree = "<group>"; };
+		03159CCC2077BDDB00402179 /* LFSolutionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFSolutionModel.m; sourceTree = "<group>"; };
+		03159CCE2077C03300402179 /* LFSolutionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFSolutionCell.h; sourceTree = "<group>"; };
+		03159CCF2077C03300402179 /* LFSolutionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFSolutionCell.m; sourceTree = "<group>"; };
+		03159CD02077C03300402179 /* LFSolutionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LFSolutionCell.xib; sourceTree = "<group>"; };
 		0338DE462073C39C00D53D53 /* LFMessageDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFMessageDetailViewController.h; sourceTree = "<group>"; };
 		0338DE472073C39C00D53D53 /* LFMessageDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFMessageDetailViewController.m; sourceTree = "<group>"; };
 		0338DE4C2073C98100D53D53 /* LFRepairViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFRepairViewController.h; sourceTree = "<group>"; };
@@ -288,6 +296,8 @@
 			children = (
 				03159CC220777B9D00402179 /* LFFaultModel.h */,
 				03159CC320777B9D00402179 /* LFFaultModel.m */,
+				03159CCB2077BDDB00402179 /* LFSolutionModel.h */,
+				03159CCC2077BDDB00402179 /* LFSolutionModel.m */,
 			);
 			name = Model;
 			path = DeviceMaintain/Module/Feedback/Model;
@@ -296,6 +306,9 @@
 		03159CBF20777B7200402179 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				03159CCE2077C03300402179 /* LFSolutionCell.h */,
+				03159CCF2077C03300402179 /* LFSolutionCell.m */,
+				03159CD02077C03300402179 /* LFSolutionCell.xib */,
 			);
 			name = View;
 			path = DeviceMaintain/Module/Feedback/View;
@@ -900,6 +913,7 @@
 			files = (
 				03F55C3620628E67009F8D3C /* Receive.storyboard in Resources */,
 				03F55C3220628D13009F8D3C /* Login.storyboard in Resources */,
+				03159CD22077C03300402179 /* LFSolutionCell.xib in Resources */,
 				03F55BB920626973009F8D3C /* LaunchScreen.storyboard in Resources */,
 				0338DE612073CAF700D53D53 /* LFRepairCell.xib in Resources */,
 				0338DE732073D24E00D53D53 /* Examine.storyboard in Resources */,
@@ -977,6 +991,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03159CCD2077BDDB00402179 /* LFSolutionModel.m in Sources */,
 				03159CAD20774CC000402179 /* LFFeedbackDetailViewController.m in Sources */,
 				0338DE642073CAFE00D53D53 /* LFRepairViewModel.m in Sources */,
 				03FEF0F020760B71007B8812 /* LFDeviceModel.m in Sources */,
@@ -1019,6 +1034,7 @@
 				03159CC420777B9D00402179 /* LFFaultModel.m in Sources */,
 				0338DE482073C39C00D53D53 /* LFMessageDetailViewController.m in Sources */,
 				0346FC282070BB0300AEE6FF /* LFTools.m in Sources */,
+				03159CD12077C03300402179 /* LFSolutionCell.m in Sources */,
 				0338DE5B2073CAEA00D53D53 /* LFRepairModel.m in Sources */,
 				03C2EC6E20727FED00BA63C3 /* LFMessageModel.m in Sources */,
 				03FEF0E72075FA90007B8812 /* LFApplyViewModel.m in Sources */,

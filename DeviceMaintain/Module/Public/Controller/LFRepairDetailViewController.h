@@ -15,6 +15,6 @@
 
 @property(nonatomic, copy) NSString *operationButtonTitle;
 
-@property(nonatomic, copy) void(^operationBlock)(LFRepairDetailModel *detailModel);
+@property(nonatomic, copy) void(^operationBlock)(LFRepairDetailModel *detailModel, LFRepairModel *repairModel);
 
 @end
