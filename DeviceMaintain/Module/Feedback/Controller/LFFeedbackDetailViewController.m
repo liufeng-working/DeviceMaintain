@@ -205,8 +205,10 @@
     return _userVC;
 }
 
+#if DEBUG
 - (void)dealloc {
     self.userVC = nil;
 }
+#endif
 
 @end

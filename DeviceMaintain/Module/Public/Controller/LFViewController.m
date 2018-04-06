@@ -25,7 +25,9 @@ static inline void lf_exchangeInstanceMethod(Class class, SEL oldSelect, SEL new
 
 + (void)load {
     lf_exchangeInstanceMethod(self, @selector(viewDidLoad), @selector(lf_viewDidLoad));
+#if DEBUG
     lf_exchangeInstanceMethod(self, NSSelectorFromString(@"dealloc"), @selector(lf_dealloc));
+#endif
 }
 
 - (void)lf_viewDidLoad {
