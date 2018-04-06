@@ -26,20 +26,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    [LFMessageViewModel.new messagesWithSuccess:^(NSArray<LFMessageModel *> *messages) {
-//        NSPredicate *p = [NSPredicate predicateWithFormat:@"Status=0"];
-//        NSArray *unreadArray = [messages filteredArrayUsingPredicate:p];
-//        [self.viewControllers enumerateObjectsUsingBlock:^(__kindof UINavigationController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//            if ([obj.viewControllers.firstObject isKindOfClass:[LFMessageViewController class]]) {
-//                obj.tabBarItem.badgeValue = unreadArray.count ? [NSString stringWithFormat:@"%@", @(unreadArray.count)] : nil;
-//                *stop = YES;
-//            }
-//        }];
-//    } failure:nil];
-}
-
--(void)dealloc {
-    NSLog(@"%s",__func__);
+    [LFMessageViewModel.new messagesWithSuccess:^(NSArray<LFMessageModel *> *messages) {
+        NSPredicate *p = [NSPredicate predicateWithFormat:@"Status=0"];
+        NSArray *unreadArray = [messages filteredArrayUsingPredicate:p];
+        [self.viewControllers enumerateObjectsUsingBlock:^(__kindof UINavigationController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            if ([obj.viewControllers.firstObject isKindOfClass:[LFMessageViewController class]]) {
+                obj.tabBarItem.badgeValue = unreadArray.count ? [NSString stringWithFormat:@"%@", @(unreadArray.count)] : nil;
+                *stop = YES;
+            }
+        }];
+    } failure:nil];
 }
 
 @end

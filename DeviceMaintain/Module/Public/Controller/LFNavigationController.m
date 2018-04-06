@@ -78,8 +78,4 @@
     return self.viewControllers.count > 1 && ![[self valueForKey:@"_isTransitioning"] boolValue];
 }
 
--(void)dealloc {
-    NSLog(@"%s",__func__);
-}
-
 @end
