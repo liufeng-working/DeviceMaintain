@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LFMessageViewModel.h"
 
 @interface LFMessageViewController : UIViewController
 

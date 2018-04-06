@@ -19,6 +19,7 @@
     [super viewDidLoad];
     
     [LFNotificationCenter addObserver:self selector:@selector(refresh:) name:LFReceiveSuccessNotification object:nil];
+    [LFNotificationCenter addObserver:self selector:@selector(refresh:) name:LFFeedbackSuccessNotification object:nil];
     self.type = LFRepairTypeFeedback;
     self.operationButtonTitle = @"去反馈";
     __weak typeof(self) weakSelf = self;

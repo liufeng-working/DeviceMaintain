@@ -26,7 +26,7 @@ LFCell_implementation(messageCell, LFMessageCell);
 {
     _messageModel = messageModel;
     
-    self.iconImageView.image = [UIImage imageNamed:messageModel.Status ? @"ic_new_read" : @"ic_new_read"];
+    self.iconImageView.image = [UIImage imageNamed:messageModel.Status ? @"ic_new_read" : @"ic_new_unread"];
     self.titleLabel.text = messageModel.MessageTypeString;
     self.dateLabel.text = messageModel.CreateTime;
     self.contentLabel.text = messageModel.Content;

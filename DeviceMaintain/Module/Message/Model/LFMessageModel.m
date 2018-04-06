@@ -15,7 +15,7 @@
 {
     NSString *_MessageTypeString = objc_getAssociatedObject(self, _cmd);
     if (!_MessageTypeString) {
-        _MessageTypeString = [LFMessageTool MessageType:self.Status];
+        _MessageTypeString = [LFMessageTool MessageType:self.MessageType];
         objc_setAssociatedObject(self, _cmd, _MessageTypeString, OBJC_ASSOCIATION_COPY_NONATOMIC);
     }
     return _MessageTypeString;

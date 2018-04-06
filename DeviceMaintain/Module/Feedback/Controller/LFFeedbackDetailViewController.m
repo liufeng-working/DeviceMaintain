@@ -141,7 +141,8 @@
     param[@"Suggest"] = self.SuggestTextField.text;
     param[@"UserID"] = [LFUserManager manager].user.UserID;
     param[@"UserName"] = [LFUserManager manager].user.UserCode;
-          
+    
+    [LFNotification manuallyHideIndicatorWithText:@"正在处理"];
     [self.feedbackViewModel feedback:param success:^{
         [LFNotification manuallyHideWithText:@"反馈成功"];
         [LFNotificationCenter postNotificationName:LFFeedbackSuccessNotification object:nil];

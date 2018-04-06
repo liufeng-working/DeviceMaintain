@@ -114,4 +114,8 @@
     return _nodataView;
 }
 
+- (void)dealloc {
+    [self removeObserver:self forKeyPath:@"repairs"];
+}
+
 @end

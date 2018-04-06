@@ -11,5 +11,6 @@
 @interface LFExamineDetailViewController : UIViewController
 
 @property(nonatomic, copy) NSString *ID;
+@property(nonatomic, copy) NSString *Code;
 
 @end

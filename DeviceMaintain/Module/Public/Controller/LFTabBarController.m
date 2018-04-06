@@ -3,6 +3,7 @@
 //
 
 #import "LFTabBarController.h"
+#import "LFMessageViewController.h"
 
 @interface LFTabBarController ()
 
@@ -25,7 +26,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.tabBar.translucent = NO;
+//    [LFMessageViewModel.new messagesWithSuccess:^(NSArray<LFMessageModel *> *messages) {
+//        NSPredicate *p = [NSPredicate predicateWithFormat:@"Status=0"];
+//        NSArray *unreadArray = [messages filteredArrayUsingPredicate:p];
+//        [self.viewControllers enumerateObjectsUsingBlock:^(__kindof UINavigationController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//            if ([obj.viewControllers.firstObject isKindOfClass:[LFMessageViewController class]]) {
+//                obj.tabBarItem.badgeValue = unreadArray.count ? [NSString stringWithFormat:@"%@", @(unreadArray.count)] : nil;
+//                *stop = YES;
+//            }
+//        }];
+//    } failure:nil];
 }
 
 -(void)dealloc {

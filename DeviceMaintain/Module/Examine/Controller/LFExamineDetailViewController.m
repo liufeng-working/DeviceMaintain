@@ -68,6 +68,7 @@
 
 - (void)loadData
 {
+    [LFNotification manuallyHideWithIndicator];
     [self.examineViewModel getExamineDetailWithId:self.ID success:^(LFExamineDetailModel *detailM) {
         self.refreshButton.hidden = YES;
         [self fillData:detailM];
@@ -80,14 +81,14 @@
 
 - (void)fillData:(LFExamineDetailModel *)detailModel
 {
-    self.FaultCategoryLabel.text = [NSString stringWithFormat:@"%ld", (long)detailModel.FaultCategory];
-//    self.ServiceManLabel.text =
-    self.ArriveTimeLabel.text = detailModel.ArriveTime;
-    self.LeaveTimeLabel.text = detailModel.LeaveTime;
-    self.MaintResultLabel.text = detailModel.MaintResult;
-    self.FaultReasonLabel.text = detailModel.FaultReason;
-    self.SolveWayLabel.text = detailModel.SolveWay;
-    self.SuggestLabel.text = detailModel.Suggest;
+    self.FaultCategoryLabel.text = [NSString stringWithFormat:@"%@%@", self.FaultCategoryLabel.text, [NSString stringWithFormat:@"%ld", (long)detailModel.FaultCategory]];
+    self.ServiceManLabel.text = [NSString stringWithFormat:@"%@%@",  self.ServiceManLabel.text ,detailModel.CreateUser];
+    self.ArriveTimeLabel.text = [NSString stringWithFormat:@"%@%@", self.ArriveTimeLabel.text ,detailModel.ArriveTime];
+    self.LeaveTimeLabel.text = [NSString stringWithFormat:@"%@%@", self.LeaveTimeLabel.text ,detailModel.LeaveTime];
+    self.MaintResultLabel.text = [NSString stringWithFormat:@"%@%@", self.MaintResultLabel.text ,detailModel.MaintResult];
+    self.FaultReasonLabel.text = [NSString stringWithFormat:@"%@%@", self.FaultReasonLabel.text ,detailModel.FaultReason];
+    self.SolveWayLabel.text = [NSString stringWithFormat:@"%@%@", self.SolveWayLabel.text ,detailModel.SolveWay];
+    self.SuggestLabel.text = [NSString stringWithFormat:@"%@%@", self.SuggestLabel.text ,detailModel.Suggest];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {

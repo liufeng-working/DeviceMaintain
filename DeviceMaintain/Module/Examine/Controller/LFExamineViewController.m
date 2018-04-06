@@ -25,6 +25,7 @@
     self.operationBlock = ^(LFRepairDetailModel *detailModel, LFRepairModel *repairModel) {
         LFExamineDetailViewController *examineDetailVC = LFSB_ViewController(LFExamineSBName, LFExamineDetailViewController);
         examineDetailVC.ID = detailModel.ID;
+        examineDetailVC.Code = detailModel.Code;
         [weakSelf.navigationController pushViewController:examineDetailVC animated:YES];
     };
     
