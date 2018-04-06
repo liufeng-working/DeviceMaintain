@@ -10,12 +10,16 @@
 #import "LFProfileTool.h"
 #import "LFRepairCell.h"
 #import "LFRepairDetailViewController.h"
+#import "LFNoDataView.h"
 
 @interface LFRepairViewController ()
 
 @property(nonatomic, strong) NSArray<LFRepairModel *> *repairs;
 
 @property(nonatomic, strong) LFRepairViewModel *repaireViewModel;
+
+@property(nonatomic, weak) LFNoDataView *nodataView;
+
 @end
 
 @implementation LFRepairViewController
@@ -37,6 +41,26 @@
         }];
     }];
     [self.tableView.mj_header beginRefreshing];
+    
+    self.view.backgroundColor = [UIColor clearColor];
+    
+    [self addObserver:self forKeyPath:@"repairs" options:NSKeyValueObservingOptionNew context:nil];
+}
+
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    
+    self.nodataView.frame = self.view.superview.bounds;
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"repairs"]) {
+        if (self.repairs.count) {
+            [self.nodataView hide];
+        }else {
+            [self.nodataView show];
+        }
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -73,8 +97,14 @@
     return _repaireViewModel;
 }
 
-- (void)dealloc {
-    NSLog(@"%s", __func__);
+- (LFNoDataView *)nodataView
+{
+    if (!_nodataView) {
+        LFNoDataView *nodataView = [LFNoDataView noDataView];
+        [self.view.superview insertSubview:nodataView belowSubview:self.view];
+        _nodataView = nodataView;
+    }
+    return _nodataView;
 }
 
 @end

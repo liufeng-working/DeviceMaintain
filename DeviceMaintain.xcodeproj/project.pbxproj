@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03159CA9207743DB00402179 /* LFNoDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03159CA6207743DB00402179 /* LFNoDataView.xib */; };
+		03159CAA207743DB00402179 /* LFNoDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03159CA7207743DB00402179 /* LFNoDataView.m */; };
 		0338DE482073C39C00D53D53 /* LFMessageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0338DE472073C39C00D53D53 /* LFMessageDetailViewController.m */; };
 		0338DE4E2073C98100D53D53 /* LFRepairViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0338DE4D2073C98100D53D53 /* LFRepairViewController.m */; };
 		0338DE5B2073CAEA00D53D53 /* LFRepairModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0338DE572073CAEA00D53D53 /* LFRepairModel.m */; };
@@ -77,6 +79,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03159CA6207743DB00402179 /* LFNoDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFNoDataView.xib; sourceTree = "<group>"; };
+		03159CA7207743DB00402179 /* LFNoDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFNoDataView.m; sourceTree = "<group>"; };
+		03159CA8207743DB00402179 /* LFNoDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFNoDataView.h; sourceTree = "<group>"; };
 		0338DE462073C39C00D53D53 /* LFMessageDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFMessageDetailViewController.h; sourceTree = "<group>"; };
 		0338DE472073C39C00D53D53 /* LFMessageDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFMessageDetailViewController.m; sourceTree = "<group>"; };
 		0338DE4C2073C98100D53D53 /* LFRepairViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFRepairViewController.h; sourceTree = "<group>"; };
@@ -627,6 +632,9 @@
 				0338DE5F2073CAF600D53D53 /* LFRepairCell.h */,
 				0338DE5D2073CAF600D53D53 /* LFRepairCell.m */,
 				0338DE5E2073CAF600D53D53 /* LFRepairCell.xib */,
+				03159CA8207743DB00402179 /* LFNoDataView.h */,
+				03159CA7207743DB00402179 /* LFNoDataView.m */,
+				03159CA6207743DB00402179 /* LFNoDataView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -792,6 +800,7 @@
 				03F55BB920626973009F8D3C /* LaunchScreen.storyboard in Resources */,
 				0338DE612073CAF700D53D53 /* LFRepairCell.xib in Resources */,
 				0338DE732073D24E00D53D53 /* Examine.storyboard in Resources */,
+				03159CA9207743DB00402179 /* LFNoDataView.xib in Resources */,
 				03F55BB620626973009F8D3C /* Assets.xcassets in Resources */,
 				0396055220762E4D00412EAF /* LFUserCell.xib in Resources */,
 				03F55C3E20628E9B009F8D3C /* Profile.storyboard in Resources */,
@@ -890,6 +899,7 @@
 				03F55BC5206269BE009F8D3C /* AppDelegate.m in Sources */,
 				0346FC3E2070C32600AEE6FF /* UIViewController+LFCategory.m in Sources */,
 				03C2EC762072801500BA63C3 /* LFMessageTool.m in Sources */,
+				03159CAA207743DB00402179 /* LFNoDataView.m in Sources */,
 				0338DE672073CB3B00D53D53 /* LFRepairDetailViewController.m in Sources */,
 				0346FC2E2070BF1500AEE6FF /* MBProgressHUD.m in Sources */,
 				0338DE762073D27700D53D53 /* LFFeedbackViewController.m in Sources */,
