@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LFRepairViewModel.h"
 
-@class LFRepairModel;
 @interface LFRepairDetailViewController : UIViewController
 
 @property(nonatomic, strong) LFRepairModel *repairM;
+
+@property(nonatomic, assign) LFRepairType type;
 
 @end

@@ -13,5 +13,6 @@ static NSString *const LFProfileSBName = @"Profile";
 static NSString *const LFMessageSBName = @"Message";
 static NSString *const LFPublicSBName = @"Public";
 static NSString *const LFReceiveSBName = @"Receive";
+static NSString *const LFExamineSBName = @"Examine";
 
 #endif /* LFStoryboardName_h */

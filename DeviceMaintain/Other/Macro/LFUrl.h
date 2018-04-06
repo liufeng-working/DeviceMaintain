@@ -36,6 +36,12 @@
 // 获取设备列表
 #define LFSubmitUrl LF_appendUrl(/api/RepairOrder/SubmitRepairOrder)
 
+// 报修单审核详情
+#define LFExamineDetailUrl LF_appendUrl(/api/MaintOrder/GetMaintOrderDetail)
+
+// 报修单审核
+#define LFExamineUrl LF_appendUrl(/api/MaintOrder/AuditMaintOrder)
+
 #define LF_appendUrl(path) [NSString stringWithFormat:@"http://%@%@", LFLoginTool.getIP, @#path]
 
 #endif /* LFUrl_h */

@@ -18,10 +18,16 @@
     [super viewDidLoad];
  
     self.type = LFRepairTypeExamine;
+    [LFNotificationCenter addObserver:self selector:@selector(refresh:) name:LFExamineSuccessNotification object:nil];
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)refresh:(NSNotification *)noti
+{
     [self.tableView.mj_header beginRefreshing];
+}
+
+- (void)dealloc {
+    [LFNotificationCenter removeObserver:self];
 }
 
 @end

@@ -84,6 +84,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     LFRepairDetailViewController *detailVC = LFSB_ViewController(LFPublicSBName, LFRepairDetailViewController);
     detailVC.repairM = self.repairs[indexPath.row];
+    detailVC.type = self.type;
     LFPush(detailVC);
 }
 

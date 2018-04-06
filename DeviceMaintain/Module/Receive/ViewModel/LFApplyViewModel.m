@@ -55,7 +55,10 @@
 {
     [LFNetWorking GET:LFGetUserUrl parameters:@{@"tid": tid, @"rid": rid} success:^(id result) {
         if (success) {
-            success([LFUserModel mj_objectArrayWithKeyValuesArray:result]);
+            success([[LFUserModel mj_objectArrayWithKeyValuesArray:result] map:^id _Nonnull(LFUserModel *obj) {
+                obj.IsCheck = YES;
+                return obj;
+            }]);
         }
     } failure:^(NSError *error) {
         if (failure) {
