@@ -16,6 +16,7 @@
                        failure:(void(^)(void))failure;
 
 - (void)examineWithId:(NSString *)ID
+             repairID:(NSString *)repairID
                   msg:(NSString *)msg
               success:(void(^)(void))success
               failure:(void(^)(void))failure;

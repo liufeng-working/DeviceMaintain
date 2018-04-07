@@ -92,7 +92,8 @@
               success:(void(^)(void))success
               failure:(void(^)(void))failure
 {
-    [LFNetWorking POST:LFReceiveUrl parameters:@{@"repairID": ID, @"userID": [LFUserManager manager].user.UserID, @"userName": [LFUserManager manager].user.UserCode} success:^(id result) {
+    NSString *receiveUrl = [NSString stringWithFormat:@"%@?repairID=%@&userID=%@&userName=%@", LFReceiveUrl, ID, [LFUserManager manager].user.UserID, [LFUserManager manager].user.UserCode];
+    [LFNetWorking POST:receiveUrl parameters:@{} success:^(id result) {
         if (success) {
             success();
         }

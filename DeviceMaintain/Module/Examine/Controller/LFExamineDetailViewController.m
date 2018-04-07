@@ -54,7 +54,7 @@
     }
     
     [LFNotification manuallyHideIndicatorWithText:@"审核中"];
-    [self.examineViewModel examineWithId:self.detailModel.RepairID msg:msg success:^{
+    [self.examineViewModel examineWithId:self.detailModel.ID repairID:self.detailModel.RepairID msg:msg success:^{
         [LFNotification manuallyHideWithText:@"审核成功"];
         [LFNotificationCenter postNotificationName:LFExamineSuccessNotification object:nil];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
