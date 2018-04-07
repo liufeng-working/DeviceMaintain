@@ -51,7 +51,11 @@
             [LFLoginTool savePassword:self.passwordTextField.text];
         }
         
-        LFWindow.rootViewController = LFMain;
+        if ([LFUserManager manager].user.Post == LFUserTypeServer) {
+            LFWindow.rootViewController = LFMain1;
+        }else {
+            LFWindow.rootViewController = LFMain;
+        }
     }];
 }
 

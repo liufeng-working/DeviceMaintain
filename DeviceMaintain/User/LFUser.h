@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger, LFUserType) {
+    LFUserTypeDefault        = 0,// 0.默认
+    LFUserTypeClient         = 1,// 1.客户
+    LFUserTypeServer         = 2,// 2.售后
+    LFUserTypeServerDirector = 3,// 3.售后主管
+    LFUserTypeHQDirector     = 4,// 4.总部主管
+};
+
 @interface LFUser : NSObject
 
 /**
@@ -33,7 +41,7 @@
 /**
  职位类型。0.默认  1.客户  2.售后  3.售后主管  4.总部主管
  */
-@property(nonatomic, assign) NSInteger Post;
+@property(nonatomic, assign) LFUserType Post;
 
 /**
  客户id

@@ -11,6 +11,7 @@
 #define LFLogin LFSB_InitialViewController(@"Login")
 // 主视图
 #define LFMain LFSB_InitialViewController(@"Main")
+#define LFMain1 LFSB_InitialViewController(@"Main1")
 
 #pragma mark -
 #pragma mark - 从storyboard获取viewController
