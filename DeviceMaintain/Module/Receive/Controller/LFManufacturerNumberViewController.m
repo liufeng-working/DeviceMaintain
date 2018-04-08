@@ -86,7 +86,7 @@
             self.devices = [self.allDevices filteredArrayUsingPredicate:p].mutableCopy;
             
         }else {
-            NSPredicate *p = [NSPredicate predicateWithFormat:@"MacModelName CONTAINS %@", self.searchBar.text];
+            NSPredicate *p = [NSPredicate predicateWithFormat:@"ClientCode CONTAINS %@", self.searchBar.text];
             self.devices = [self.allDevices filteredArrayUsingPredicate:p].mutableCopy;
         }
         
