@@ -43,8 +43,8 @@ static NSString *const identifier = @"LFSolutionCell";
     
     LFSolutionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     cell.contentView.backgroundColor = LF_color_efeff4();
-    cell.solutionModel = self.solutions[indexPath.row];
     cell.indexPath = indexPath;
+    cell.solutionModel = self.solutions[indexPath.row];
     cell.delegate = self;
     return cell;
 }
