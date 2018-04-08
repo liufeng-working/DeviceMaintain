@@ -1189,7 +1189,7 @@
 				GCC_PREFIX_HEADER = "${SRCROOT}/DeviceMaintain/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/DeviceMaintain/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.liufeng.DeviceMaintain;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jtzn.DeviceMaintain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1205,7 +1205,7 @@
 				GCC_PREFIX_HEADER = "${SRCROOT}/DeviceMaintain/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/DeviceMaintain/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.liufeng.DeviceMaintain;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jtzn.DeviceMaintain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

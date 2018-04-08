@@ -41,7 +41,7 @@
                                 <subviews>
                                     <button opaque="NO" tag="504" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FU-Xl-dLE">
                                         <rect key="frame" x="0.0" y="0.0" width="125" height="44"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="未读" image="checkbox_nor">
                                             <color key="titleColor" red="0.3803921569" green="0.63137254899999995" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -53,7 +53,7 @@
                                     </button>
                                     <button opaque="NO" tag="419" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUB-UN-44K">
                                         <rect key="frame" x="125" y="0.0" width="125" height="44"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="已读" image="checkbox_nor">
                                             <color key="titleColor" red="0.3803921569" green="0.63137254899999995" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -65,7 +65,7 @@
                                     </button>
                                     <button opaque="NO" tag="504419" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdK-Jh-kPm">
                                         <rect key="frame" x="250" y="0.0" width="125" height="44"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="全部" image="checkbox_nor">
                                             <color key="titleColor" red="0.3803921569" green="0.63137254899999995" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -77,6 +77,7 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="tZU-bF-gmy"/>
                                 </constraints>
